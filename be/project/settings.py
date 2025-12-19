@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     "restaurants",
     "bookings",
     "notifications",
+
+    'chatbot',
 ]
 
 
@@ -178,3 +180,30 @@ SIMPLE_JWT = {
 }
 
 AUTH_USER_MODEL = "accounts.User"
+
+
+
+
+
+
+# ===== CHATBOT CONFIG =====
+CHATBOT_CONFIG = {
+    # Thresholds
+    'INTENT_HIGH_THRESHOLD': 0.85,
+    'GLOBAL_MIN_SCORE': 0.70,
+    
+    # Restaurant fuzzy thresholds
+    'RES_STRICT_THRESHOLD': 85,
+    'RES_AMBIGUOUS_THRESHOLD': 65,
+    
+    # Dish fuzzy thresholds
+    'DISH_STRICT_THRESHOLD': 85,
+    'DISH_AMBIGUOUS_THRESHOLD': 55,
+    
+    # Location fuzzy thresholds
+    'LOCATION_STRICT_THRESHOLD': 80,
+    'LOCATION_AMBIGUOUS_THRESHOLD': 65,
+    
+    # Fallback
+    'FALLBACK_MESSAGE': 'Tôi chưa hiểu câu hỏi lắm, bạn nói rõ hơn được không?',
+}

@@ -20,12 +20,14 @@ import {
 import { buildImageUrl, PLACEHOLDER_IMAGE } from "@/lib/imageUtils";
 import BookingForm from "@/components/bookings/BookingForm";
 import NotificationBell from "@/components/notifications/NotificationBell";
+import * as vn from "vietnam-provinces";
+import type { Province, District, Ward } from "vietnam-provinces";
+
+import ChatWidget from '@/components/chat/ChatWidget';
 
 const API_BASE = import.meta.env.VITE_API_BASE || "http://127.0.0.1:8000";
 
-// Bỏ dấu "/" dư ở cuối nếu có, rồi thêm /admin/
 const ADMIN_URL = `${API_BASE.replace(/\/+$/, "")}/admin/`;
-
 
 type Restaurant = {
   id: number;
@@ -44,22 +46,20 @@ type Restaurant = {
   images?: { id: number; image_url: string; display_order: number }[];
 };
 
-type Location = {
-  id: number;
-  city: string;
-  district?: string;
-  ward?: string;
-  full_address?: string;
-};
-
 export default function Home() {
   const navigate = useNavigate();
 
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedLocation, setSelectedLocation] = useState("");
-  const [selectedDate, setSelectedDate] = useState("");
-  const [selectedTime, setSelectedTime] = useState("");
-  const [guests, setGuests] = useState("2");
+  const [selectedProvinceCode, setSelectedProvinceCode] = useState("");
+  const [selectedProvinceName, setSelectedProvinceName] = useState("");
+  const [selectedDistrictCode, setSelectedDistrictCode] = useState("");
+  const [selectedDistrictName, setSelectedDistrictName] = useState("");
+  const [selectedWardCode, setSelectedWardCode] = useState("");
+  const [selectedWardName, setSelectedWardName] = useState("");
+
+  const [provinces, setProvinces] = useState<Province[]>([]);
+  const [districts, setDistricts] = useState<District[]>([]);
+  const [wards, setWards] = useState<Ward[]>([]);
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState<any>(null);
@@ -67,7 +67,6 @@ export default function Home() {
   const [accountMenuOpen, setAccountMenuOpen] = useState(false);
 
   const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
-  const [locations, setLocations] = useState<Location[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -87,72 +86,117 @@ export default function Home() {
       }
     }
 
-    fetchLocations();
+    try {
+      const data = (vn as any).getProvinces?.() as Province[];
+      if (Array.isArray(data)) {
+        const sorted = [...data].sort((a, b) =>
+          String((a as any).name).localeCompare(String((b as any).name), "vi")
+        );
+        setProvinces(sorted);
+      }
+    } catch (err) {
+      console.error("Lỗi tải tỉnh/thành:", err);
+    }
+
     fetchRestaurants();
   }, []);
 
-  const fetchLocations = async () => {
+  const fetchRestaurants = async () => {
+    setLoading(true);
+    setError("");
     try {
-      const res = await fetch(`${API_BASE}/api/restaurants/locations/`);
+      const params = new URLSearchParams();
+      if (searchQuery) params.append("query", searchQuery);
+      if (selectedProvinceName) params.append("city", selectedProvinceName);
+      if (selectedDistrictName) params.append("district", selectedDistrictName);
+      if (selectedWardName) params.append("ward", selectedWardName);
+
+      const url = `${API_BASE}/api/restaurants/restaurants/search/${
+        params.toString() ? "?" + params.toString() : ""
+      }`;
+
+      const res = await fetch(url);
       if (res.ok) {
         const data = await res.json();
-        setLocations(data);
+        
+        const restaurantsWithImages = await Promise.all(
+          (data.results || data).map(async (restaurant: Restaurant) => {
+            try {
+              const imagesRes = await fetch(
+                `${API_BASE}/api/restaurants/images/?restaurant_id=${restaurant.id}`
+              );
+              if (imagesRes.ok) {
+                const images = await imagesRes.json();
+                return { ...restaurant, images };
+              }
+            } catch (err) {
+              console.error(`Failed to fetch images for restaurant ${restaurant.id}:`, err);
+            }
+            return restaurant;
+          })
+        );
+        
+        setRestaurants(restaurantsWithImages);
+      } else {
+        setError("Không thể tải danh sách nhà hàng");
       }
     } catch (err) {
-      console.error("Failed to fetch locations:", err);
+      setError("Lỗi kết nối server");
+      console.error(err);
+    } finally {
+      setLoading(false);
     }
   };
-
-const fetchRestaurants = async () => {
-  setLoading(true);
-  setError("");
-  try {
-    const params = new URLSearchParams();
-    if (searchQuery) params.append("search", searchQuery);
-    if (selectedLocation) params.append("location", selectedLocation);
-
-    const url = `${API_BASE}/api/restaurants/restaurants/${
-      params.toString() ? "?" + params.toString() : ""
-    }`;
-
-    const res = await fetch(url);
-    if (res.ok) {
-      const data = await res.json();
-      
-      // 🔥 THÊM ĐOẠN NÀY: Fetch images cho từng restaurant
-      const restaurantsWithImages = await Promise.all(
-        data.map(async (restaurant: Restaurant) => {
-          try {
-            // Fetch images của từng nhà hàng
-            const imagesRes = await fetch(
-              `${API_BASE}/api/restaurants/images/?restaurant_id=${restaurant.id}`
-            );
-            if (imagesRes.ok) {
-              const images = await imagesRes.json();
-              return { ...restaurant, images };
-            }
-          } catch (err) {
-            console.error(`Failed to fetch images for restaurant ${restaurant.id}:`, err);
-          }
-          return restaurant;
-        })
-      );
-      
-      setRestaurants(restaurantsWithImages);
-    } else {
-      setError("Không thể tải danh sách nhà hàng");
-    }
-  } catch (err) {
-    setError("Lỗi kết nối server");
-    console.error(err);
-  } finally {
-    setLoading(false);
-  }
-};
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     fetchRestaurants();
+  };
+
+  const handleProvinceChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const provinceCode = e.target.value;
+
+    setSelectedProvinceCode(provinceCode);
+    setSelectedDistrictCode("");
+    setSelectedDistrictName("");
+    setSelectedWardCode("");
+    setSelectedWardName("");
+    setWards([]);
+
+    const p = provinces.find((x) => String((x as any).code) === String(provinceCode));
+    setSelectedProvinceName(p ? String((p as any).name) : "");
+
+    const dList =
+      typeof (vn as any).getDistricts === "function"
+        ? ((vn as any).getDistricts(provinceCode) as District[])
+        : [];
+    setDistricts(Array.isArray(dList) ? dList : []);
+  };
+
+  const handleDistrictChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const districtCode = e.target.value;
+
+    setSelectedDistrictCode(districtCode);
+    setSelectedWardCode("");
+    setSelectedWardName("");
+
+    const d = districts.find((x) => String((x as any).code) === String(districtCode));
+    setSelectedDistrictName(d ? String((d as any).name) : "");
+
+    const wList =
+      typeof (vn as any).getWards === "function" && districtCode
+        ? ((vn as any).getWards(districtCode) as Ward[])
+        : [];
+    setWards(Array.isArray(wList) ? wList : []);
+  };
+
+  const handleWardChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const wardCode = e.target.value;
+
+    setSelectedWardCode(wardCode);
+
+    const w = wards.find((x) => String((x as any).code) === String(wardCode));
+    setSelectedWardName(w ? String((w as any).name) : "");
   };
 
   const handleLogout = async () => {
@@ -289,10 +333,9 @@ const fetchRestaurants = async () => {
               >
                 Ưu Đãi
               </a>
-
+              <ChatWidget />
               {getRoleButton()}
 
-              {/* 🔥 THÊM NOTIFICATION BELL Ở ĐÂY (TRƯỚC USER MENU) */}
               {isLoggedIn && <NotificationBell position="right" />}
 
               {isLoggedIn ? (
@@ -359,7 +402,7 @@ const fetchRestaurants = async () => {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-          <div className="text-white max-w-2xl">
+          <div className="text-white max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Đặt Bàn Dễ Dàng,
               <br />
@@ -372,81 +415,96 @@ const fetchRestaurants = async () => {
               giây. Trải nghiệm ẩm thực chưa bao giờ dễ dàng đến thế!
             </p>
 
-            {/* Search Box */}
-            <div onSubmit={handleSearch} className="bg-white rounded-2xl shadow-2xl p-6 space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="relative">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Tìm nhà hàng, món ăn..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none text-gray-800 transition-all"
-                  />
-                </div>
+            {/* Search Box - Cải tiến */}
+            <div className="bg-white rounded-2xl shadow-2xl p-6 space-y-4">
+              {/* Ô tìm kiếm chính */}
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Tìm nhà hàng, món ăn, khu vực..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-gray-800 transition-all text-lg"
+                />
+              </div>
 
+              {/* Bộ lọc địa điểm - Thiết kế mới */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                 <div className="relative">
-                  <MapPin className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-amber-500 w-5 h-5 z-10" />
                   <select
-                    value={selectedLocation}
-                    onChange={(e) => setSelectedLocation(e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none text-gray-800 transition-all appearance-none"
+                    value={selectedProvinceCode}
+                    onChange={handleProvinceChange}
+                    className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-gray-700 transition-all appearance-none bg-white cursor-pointer hover:border-amber-300"
                   >
-                    <option value="">Tất cả khu vực</option>
-                    {locations.map((loc) => (
-                      <option key={loc.id} value={loc.id}>
-                        {loc.city}
-                        {loc.district ? `, ${loc.district}` : ""}
+                    <option value="">Tỉnh/Thành phố</option>
+                    {provinces.map((p: any) => (
+                      <option key={String(p.code)} value={String(p.code)}>
+                        {String(p.name)}
                       </option>
                     ))}
                   </select>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="relative">
-                  <Calendar className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="date"
-                    value={selectedDate}
-                    onChange={(e) => setSelectedDate(e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none text-gray-800 transition-all"
-                  />
+                  <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                    <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
                 </div>
 
                 <div className="relative">
-                  <Clock className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="time"
-                    value={selectedTime}
-                    onChange={(e) => setSelectedTime(e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none text-gray-800 transition-all"
-                  />
-                </div>
-
-                <div className="relative">
-                  <Users className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-amber-500 w-5 h-5 z-10" />
                   <select
-                    value={guests}
-                    onChange={(e) => setGuests(e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none text-gray-800 transition-all appearance-none"
+                    value={selectedDistrictCode}
+                    onChange={handleDistrictChange}
+                    disabled={!selectedProvinceCode}
+                    className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-gray-700 transition-all appearance-none bg-white cursor-pointer hover:border-amber-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:border-gray-200"
                   >
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
-                      <option key={num} value={num}>
-                        {num} người
+                    <option value="">Quận/Huyện</option>
+                    {districts.map((d: any) => (
+                      <option key={String(d.code)} value={String(d.code)}>
+                        {String(d.name)}
                       </option>
                     ))}
                   </select>
+                  <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                    <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+                </div>
+
+                <div className="relative">
+                  <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-amber-500 w-5 h-5 z-10" />
+                  <select
+                    value={selectedWardCode}
+                    onChange={handleWardChange}
+                    disabled={!selectedDistrictCode}
+                    className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-gray-700 transition-all appearance-none bg-white cursor-pointer hover:border-amber-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:border-gray-200"
+                  >
+                    <option value="">Phường/Xã</option>
+                    {wards.map((w: any) => (
+                      <option key={String(w.code)} value={String(w.code)}>
+                        {String(w.name)}
+                      </option>
+                    ))}
+                  </select>
+                  <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                    <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
                 </div>
               </div>
 
+              {/* Nút tìm kiếm */}
               <button
                 type="button"
                 onClick={handleSearch}
-                className="w-full bg-gradient-to-r from-amber-600 to-orange-600 text-white py-4 rounded-xl font-semibold text-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]"
+                className="w-full bg-gradient-to-r from-amber-600 to-orange-600 text-white py-4 rounded-xl font-semibold text-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center space-x-2"
               >
-                Tìm Kiếm Nhà Hàng
+                <Search className="w-5 h-5" />
+                <span>Tìm Kiếm Nhà Hàng</span>
               </button>
             </div>
           </div>
@@ -516,31 +574,29 @@ const fetchRestaurants = async () => {
                 key={restaurant.id}
                 className="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] overflow-hidden group cursor-pointer"
               >
-                {/* 🔥 Wrap ảnh và tên trong Link */}
                 <Link to={`/restaurant/${restaurant.id}`}>
-                
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={imageUrl}
-                    alt={restaurant.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = PLACEHOLDER_IMAGE;
-                    }}
-                  />
-                  {restaurant.status === "APPROVED" && (
-                    <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Còn Chỗ
-                    </div>
-                  )}
-                </div> </Link>
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={imageUrl}
+                      alt={restaurant.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = PLACEHOLDER_IMAGE;
+                      }}
+                    />
+                    {restaurant.status === "APPROVED" && (
+                      <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Còn Chỗ
+                      </div>
+                    )}
+                  </div>
+                </Link>
 
                 <div className="p-5">
-                  {/* 🔥 tên nhà hàng Link */}
                   <Link to={`/restaurant/${restaurant.id}`}>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-amber-600 transition-colors">
-                    {restaurant.name}
-                  </h3>
+                    <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-amber-600 transition-colors">
+                      {restaurant.name}
+                    </h3>
                   </Link>
 
                   <div className="flex items-center space-x-2 mb-3">
@@ -554,7 +610,8 @@ const fetchRestaurants = async () => {
                     <div className="flex items-center space-x-1">
                       <Star className="w-5 h-5 text-amber-500 fill-amber-500" />
                       <span className="font-bold text-gray-800">
-                        {Number(restaurant.rating ?? 0).toFixed(1)}                      </span>
+                        {Number(restaurant.rating ?? 0).toFixed(1)}
+                      </span>
                     </div>
 
                     <button
@@ -613,40 +670,17 @@ const fetchRestaurants = async () => {
         </div>
       </footer>
 
-      {/* Booking Form Modal - TODO: Implement */}
-      {/* {bookingFormOpen && selectedRestaurant && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl p-8 max-w-2xl w-full">
-            <h3 className="text-2xl font-bold mb-4">
-              Đặt bàn tại {selectedRestaurant.name}
-            </h3>
-            <p className="text-gray-600 mb-4">
-              Booking form sẽ được implement ở component riêng
-            </p>
-            <button
-              onClick={() => setBookingFormOpen(false)}
-              className="bg-gray-500 text-white px-6 py-2 rounded-lg"
-            >
-              Đóng
-            </button>
-          </div>
-        </div>
-      )} */}
-
       {bookingFormOpen && selectedRestaurant && (
-      <BookingForm
-        restaurant={selectedRestaurant}
-        initialDate={selectedDate}
-        initialGuests={guests}
-        onClose={() => setBookingFormOpen(false)}
-        onSuccess={() => {
-          // Optional: redirect hoặc show notification
-          navigate("/my-bookings"); // Chuyển đến trang "booking của tôi"
-        }}
-      />
-    )}
-      
-
+        <BookingForm
+          restaurant={selectedRestaurant}
+          initialDate=""
+          initialGuests="2"
+          onClose={() => setBookingFormOpen(false)}
+          onSuccess={() => {
+            navigate("/my-bookings");
+          }}
+        />
+      )}
     </div>
   );
 }

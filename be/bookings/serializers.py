@@ -160,3 +160,15 @@ class CheckAvailabilitySerializer(serializers.Serializer):
         if not Restaurant.objects.filter(id=value, status='APPROVED').exists():
             raise serializers.ValidationError("Nhà hàng không tồn tại hoặc chưa được phê duyệt")
         return value
+
+
+class PartnerDashboardStatsSerializer(serializers.Serializer):
+    """Serializer cho partner dashboard stats"""
+    total_restaurants = serializers.IntegerField()
+    bookings_today = serializers.IntegerField()
+    bookings_this_week = serializers.IntegerField()
+    bookings_pending = serializers.IntegerField()
+    upcoming_bookings_next_2h = serializers.IntegerField()
+    upcoming_bookings_next_24h = serializers.IntegerField()
+    peak_hours_today = serializers.ListField()
+    bookings_7days = serializers.ListField()

@@ -358,3 +358,124 @@ class BookingViewSet(viewsets.ModelViewSet):
                 'restaurant_name': restaurant.name,
                 'available_slots': available_slots
             })
+
+    @action(
+        detail=False,
+        methods=['get'],
+        permission_classes=[IsAuthenticated],
+        url_path='partner-dashboard-stats'
+    )
+    def partner_dashboard_stats(self, request):
+        """
+        GET /api/bookings/partner-dashboard-stats/?restaurant_id=...
+        
+        Trả về thống kê cho partner dashboard:
+        - total_restaurants: Tổng số nhà hàng của partner
+        - bookings_today: Booking hôm nay
+        - bookings_this_week: Booking tuần này
+        - bookings_pending: Booking chờ xác nhận
+        - upcoming_bookings_next_2h: Booking sắp diễn ra (2h tới)
+        - upcoming_bookings_next_24h: Booking sắp diễn ra (24h tới)
+        - peak_hours_today: Top 3 khung giờ có booking hôm nay
+        - bookings_7days: Booking 7 ngày gần nhất (cho biểu đồ)
+        """
+        from datetime import datetime, timedelta
+        from collections import Counter
+        
+        user = request.user
+        
+        # Chỉ partner mới xem được
+        if user.role != 'PARTNER':
+            return Response(
+                {'error': 'Only partners can access this endpoint'},
+                status=status.HTTP_403_FORBIDDEN
+            )
+        
+        # Lấy tất cả nhà hàng của partner
+        restaurants = Restaurant.objects.filter(partner__user=user)
+        total_restaurants = restaurants.count()
+        restaurant_ids = list(restaurants.values_list('id', flat=True))
+        
+        # Nếu có restaurant_id param, chỉ lọc nhà hàng đó
+        restaurant_id_param = request.query_params.get('restaurant_id')
+        if restaurant_id_param:
+            if int(restaurant_id_param) not in restaurant_ids:
+                return Response(
+                    {'error': 'Restaurant not found or not owned by you'},
+                    status=status.HTTP_404_NOT_FOUND
+                )
+            restaurant_ids = [int(restaurant_id_param)]
+        
+        # Base queryset
+        bookings_qs = Booking.objects.filter(restaurant_id__in=restaurant_ids)
+        
+        # 1. Bookings today
+        today = timezone.now().date()
+        bookings_today = bookings_qs.filter(booking_date=today).count()
+        
+        # 2. Bookings this week (Mon-Sun)
+        now = timezone.now()
+        day = now.weekday()
+        week_start = now - timedelta(days=day)
+        week_end = week_start + timedelta(days=6)
+        week_start_date = week_start.date()
+        week_end_date = week_end.date()
+        bookings_this_week = bookings_qs.filter(
+            booking_date__gte=week_start_date,
+            booking_date__lte=week_end_date
+        ).count()
+        
+        # 3. Bookings pending
+        bookings_pending = bookings_qs.filter(status='PENDING').count()
+        
+        # 4. Upcoming bookings next 2h
+        now = timezone.now()
+        two_hours_later = now + timedelta(hours=2)
+        upcoming_2h = bookings_qs.filter(
+            booking_date=today,
+            time_slot__start_time__lte=two_hours_later.time(),
+            time_slot__start_time__gte=now.time(),
+            status__in=['PENDING', 'CONFIRMED']
+        ).count()
+        
+        # 5. Upcoming bookings next 24h
+        tomorrow = today + timedelta(days=1)
+        upcoming_24h = bookings_qs.filter(
+            booking_date__in=[today, tomorrow],
+            status__in=['PENDING', 'CONFIRMED']
+        ).count()
+        
+        # 6. Peak hours today (top 3)
+        today_bookings = bookings_qs.filter(booking_date=today)
+        time_slot_counts = Counter(
+            slot.time_slot.start_time for slot in today_bookings if slot.time_slot
+        )
+        peak_hours = [
+            {
+                'time': str(time.strftime('%H:%M')),
+                'count': count
+            }
+            for time, count in time_slot_counts.most_common(3)
+        ]
+        
+        # 7. Bookings 7 days (for chart)
+        bookings_7days_data = []
+        for i in range(6, -1, -1):  # 6 days ago to today
+            day_date = today - timedelta(days=i)
+            count = bookings_qs.filter(booking_date=day_date).count()
+            bookings_7days_data.append({
+                'date': day_date.strftime('%Y-%m-%d'),
+                'day': day_date.strftime('%a'),
+                'count': count
+            })
+        
+        return Response({
+            'total_restaurants': total_restaurants,
+            'bookings_today': bookings_today,
+            'bookings_this_week': bookings_this_week,
+            'bookings_pending': bookings_pending,
+            'upcoming_bookings_next_2h': upcoming_2h,
+            'upcoming_bookings_next_24h': upcoming_24h,
+            'peak_hours_today': peak_hours,
+            'bookings_7days': bookings_7days_data
+        })

@@ -26,8 +26,12 @@ urlpatterns = [
     path('api/restaurants/', include('restaurants.urls')),
     path('api/bookings/', include('bookings.urls')),
     path('api/notifications/', include('notifications.urls')),
+
+    # Chatbot
+    path('api/chatbot/', include('chatbot.urls')),
 ]
 
 # Serve media files trong development
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    # urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

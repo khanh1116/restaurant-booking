@@ -1432,3 +1432,41 @@ export function formatNotificationTime(dateTimeStr: string): string {
     minute: '2-digit'
   }).format(date);
 }
+
+// ======================== PARTNER DASHBOARD STATS ========================
+export type PartnerDashboardStats = {
+  total_restaurants: number;
+  bookings_today: number;
+  bookings_this_week: number;
+  bookings_pending: number;
+  upcoming_bookings_next_2h: number;
+  upcoming_bookings_next_24h: number;
+  peak_hours_today: Array<{ time: string; count: number }>;
+  bookings_7days: Array<{ date: string; day: string; count: number }>;
+};
+
+export async function getPartnerDashboardStats(
+  restaurantId?: string
+): Promise<PartnerDashboardStats | null> {
+  try {
+    const url = `${BASE}/api/bookings/partner-dashboard-stats/${
+      restaurantId ? `?restaurant_id=${restaurantId}` : ''
+    }`;
+
+    const res = await fetch(url, {
+      method: 'GET',
+      headers: getAuthHeaders(),
+    });
+
+    if (!res.ok) {
+      console.error('Failed to fetch dashboard stats:', await res.json());
+      return null;
+    }
+
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching dashboard stats:', error);
+    return null;
+  }
+}

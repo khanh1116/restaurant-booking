@@ -1,0 +1,401 @@
+id,question,answer,category
+FAQ_001,"Làm sao để đặt bàn trên web?","Bạn truy cập trang chủ, chọn nhà hàng, chọn ngày giờ và số khách, sau đó nhấn 'Đặt ngay' và điền thông tin.",SYSTEM
+FAQ_002,"Web này có thu phí đặt bàn không?","Hệ thống hoàn toàn miễn phí dịch vụ đặt bàn. Bạn chỉ thanh toán tiền ăn uống thực tế tại nhà hàng.",PAYMENT
+FAQ_003,"Tôi muốn hủy đơn đặt bàn thì làm sao?","Bạn vào mục 'Lịch sử đặt bàn', chọn đơn cần hủy và nhấn nút 'Hủy đơn'. Lưu ý xem chính sách hủy của từng nhà hàng.",BOOKING
+FAQ_004,"Làm thế nào để đăng ký tài khoản?","Bạn nhấn vào nút 'Đăng ký' ở góc phải màn hình, nhập số điện thoại hoặc email để tạo tài khoản mới.",ACCOUNT
+FAQ_005,"Tôi quên mật khẩu đăng nhập rồi.","Bạn nhấn vào 'Quên mật khẩu' tại màn hình đăng nhập, hệ thống sẽ gửi mã OTP hoặc link khôi phục qua email/SĐT của bạn.",ACCOUNT
+FAQ_006,"Đặt bàn xong có tin nhắn xác nhận không?","Có ạ. Hệ thống sẽ gửi email và tin nhắn SMS (hoặc Zalo) xác nhận ngay sau khi bạn đặt thành công.",BOOKING
+FAQ_007,"Tôi muốn đổi giờ đặt bàn được không?","Được ạ. Bạn vui lòng vào quản lý đơn đặt để 'Sửa giờ' hoặc gọi hotline hỗ trợ nếu sát giờ hẹn.",BOOKING
+FAQ_008,"Có cần đặt cọc khi đặt bàn không?","Tùy quy định của từng nhà hàng. Một số nơi yêu cầu cọc với đoàn đông hoặc giờ cao điểm, hệ thống sẽ thông báo rõ khi bạn đặt.",PAYMENT
+FAQ_009,"Hệ thống có tích điểm không?","Có ạ. Mỗi lần đặt bàn và hoàn thành bữa ăn, bạn sẽ được tích điểm để đổi voucher giảm giá.",LOYALTY
+FAQ_010,"Làm sao để sử dụng mã giảm giá?","Tại bước thanh toán/xác nhận đặt bàn, bạn nhập mã vào ô 'Mã khuyến mãi' để được áp dụng ưu đãi.",LOYALTY
+FAQ_011,"Tôi muốn xóa tài khoản vĩnh viễn.","Bạn vào 'Cài đặt tài khoản' và chọn 'Yêu cầu xóa tài khoản'. Dữ liệu sẽ được xóa sau 30 ngày.",ACCOUNT
+FAQ_012,"Hệ thống bảo mật thông tin khách hàng thế nào?","Chúng tôi cam kết bảo mật tuyệt đối thông tin cá nhân của bạn theo chính sách bảo mật được công bố trên website.",SYSTEM
+FAQ_013,"Tại sao tôi không nhận được mã OTP?","Vui lòng kiểm tra lại số điện thoại, kết nối mạng, hoặc thử lại sau 2 phút. Nếu vẫn không được, hãy liên hệ hotline.",ACCOUNT
+FAQ_014,"Tôi có thể đặt bàn giúp người khác không?","Được ạ. Bạn chỉ cần điền tên và số điện thoại của người đi ăn vào phần 'Thông tin người nhận bàn'.",BOOKING
+FAQ_015,"Làm sao để biết nhà hàng nào còn chỗ?","Bạn có thể dùng bộ lọc 'Tìm kiếm', chọn ngày giờ và số người, hệ thống sẽ hiện các nhà hàng còn bàn.",SYSTEM
+FAQ_016,"Tôi muốn xem lịch sử các lần ăn trước.","Bạn vào mục 'Tài khoản' -> 'Lịch sử đặt bàn' để xem lại toàn bộ các đơn đã hoàn thành.",ACCOUNT
+FAQ_017,"Hệ thống chấp nhận phương thức thanh toán nào?","Hệ thống chấp nhận thẻ Visa/Master, thẻ ATM nội địa, ví Momo, ZaloPay và chuyển khoản ngân hàng.",PAYMENT
+FAQ_018,"Nếu tôi đến trễ thì có bị hủy bàn không?","Nhà hàng thường giữ bàn tối đa 15-30 phút. Nếu trễ hơn, bạn nên gọi báo trước để nhà hàng sắp xếp.",BOOKING
+FAQ_019,"Làm sao để đánh giá nhà hàng sau khi ăn?","Sau khi hoàn thành đơn, hệ thống sẽ gửi thông báo mời bạn đánh giá sao và viết nhận xét.",LOYALTY
+FAQ_020,"Tôi muốn khiếu nại về thái độ nhân viên nhà hàng.","Rất tiếc về trải nghiệm của bạn. Vui lòng gửi phản hồi qua mục 'Liên hệ' hoặc gọi hotline để chúng tôi xử lý.",SUPPORT
+FAQ_021,"Hướng dẫn cách tạo tài khoản mới.","Bấm vào 'Đăng ký', điền tên, SĐT, mật khẩu và xác thực OTP là xong ạ.",ACCOUNT
+FAQ_022,"Có mất tiền khi tạo tài khoản không?","Việc đăng ký tài khoản là hoàn toàn miễn phí ạ.",ACCOUNT
+FAQ_023,"Tôi muốn đổi số điện thoại đăng ký.","Bạn vào 'Thông tin cá nhân' để cập nhật số điện thoại mới nhé.",ACCOUNT
+FAQ_024,"Một số điện thoại tạo được mấy tài khoản?","Mỗi số điện thoại chỉ tạo được duy nhất một tài khoản.",ACCOUNT
+FAQ_025,"Tôi đăng nhập bằng Facebook được không?","Hệ thống có hỗ trợ đăng nhập nhanh bằng Facebook và Google.",ACCOUNT
+FAQ_026,"Làm sao để thay đổi ảnh đại diện?","Bạn vào trang cá nhân, bấm vào hình avatar để tải ảnh mới lên.",ACCOUNT
+FAQ_027,"Tài khoản của tôi bị khóa, phải làm sao?","Vui lòng liên hệ bộ phận CSKH để kiểm tra nguyên nhân và mở khóa.",ACCOUNT
+FAQ_028,"Làm sao để đăng xuất khỏi thiết bị khác?","Bạn có thể chọn 'Đăng xuất tất cả thiết bị' trong phần Cài đặt bảo mật.",ACCOUNT
+FAQ_029,"Tôi không nhớ tên đăng nhập.","Tên đăng nhập thường là số điện thoại hoặc email bạn đã đăng ký.",ACCOUNT
+FAQ_030,"Có cần xác thực email không?","Việc xác thực email giúp bạn lấy lại mật khẩu dễ dàng hơn và nhận thông báo quan trọng.",ACCOUNT
+FAQ_031,"Quy trình đặt bàn gồm mấy bước?","Gồm 3 bước: Chọn nhà hàng -> Chọn giờ & chỗ -> Xác nhận thông tin.",BOOKING
+FAQ_032,"Tôi muốn đặt bàn cho 20 người.","Với nhóm trên 10 người, bạn nên chọn bộ lọc 'Nhóm đông' hoặc gọi hotline để được hỗ trợ tốt nhất.",BOOKING
+FAQ_033,"Có thể đặt bàn trước bao lâu?","Bạn có thể đặt trước tối đa 30 ngày tùy theo lịch mở của nhà hàng.",BOOKING
+FAQ_034,"Đặt bàn gấp trong ngày được không?","Được ạ, miễn là nhà hàng còn chỗ trống vào giờ bạn chọn.",BOOKING
+FAQ_035,"Tôi muốn chọn vị trí ngồi cụ thể (view đẹp).","Bạn hãy ghi chú vào mục 'Yêu cầu đặc biệt' khi đặt, nhà hàng sẽ cố gắng sắp xếp tùy tình trạng thực tế.",BOOKING
+FAQ_036,"Làm sao biết đơn đặt đã được duyệt?","Trạng thái đơn sẽ chuyển sang 'Đã xác nhận' và bạn nhận được thông báo qua app/tin nhắn.",BOOKING
+FAQ_037,"Tôi muốn đặt phòng riêng (VIP).","Hãy tìm các nhà hàng có tiện ích 'Phòng riêng' và ghi chú yêu cầu khi đặt.",BOOKING
+FAQ_038,"Có thể đặt món ăn trước khi đến không?","Một số nhà hàng cho phép đặt món trước. Bạn xem menu trong lúc đặt bàn nhé.",BOOKING
+FAQ_039,"Hủy bàn có bị phạt tiền không?","Nếu bạn chưa đặt cọc, hủy bàn không mất phí. Nếu đã cọc, phí hủy tuỳ thuộc chính sách từng nhà hàng.",BOOKING
+FAQ_040,"Tôi lỡ tay hủy đơn, khôi phục lại được không?","Không thể khôi phục đơn đã hủy. Bạn vui lòng tạo đơn đặt mới nhé.",BOOKING
+FAQ_041,"Sửa số lượng người sau khi đặt có được không?","Được ạ. Bạn vào đơn hàng chọn 'Chỉnh sửa' hoặc gọi báo nhà hàng nếu thay đổi quá lớn.",BOOKING
+FAQ_042,"Có giới hạn số lần đặt bàn trong ngày không?","Để tránh spam, hệ thống giới hạn mỗi tài khoản đặt tối đa 3 đơn/ngày.",BOOKING
+FAQ_043,"Tại sao đơn của tôi bị từ chối?","Có thể do nhà hàng đã hết chỗ vào giờ đó hoặc đóng cửa đột xuất.",BOOKING
+FAQ_044,"Tôi muốn đặt bàn cho sinh nhật.","Bạn hãy ghi chú 'Sinh nhật' khi đặt để nhà hàng chuẩn bị chu đáo hơn.",BOOKING
+FAQ_045,"Đặt bàn qua đây giá có rẻ hơn không?","Giá món ăn là giá niêm yết tại nhà hàng, nhưng đặt qua web thường có mã ưu đãi độc quyền.",BOOKING
+FAQ_046,"Tôi muốn hoàn tiền cọc thì làm sao?","Nếu hủy đúng quy định, tiền cọc sẽ được hoàn về ví/tài khoản trong 3-5 ngày làm việc.",PAYMENT
+FAQ_047,"Thanh toán tại nhà hàng bằng gì?","Tùy nhà hàng, đa số chấp nhận Tiền mặt, Thẻ và Chuyển khoản.",PAYMENT
+FAQ_048,"Tôi muốn xuất hóa đơn đỏ (VAT).","Bạn vui lòng điền thông tin xuất hóa đơn vào mục ghi chú hoặc báo lễ tân khi thanh toán tại quán.",PAYMENT
+FAQ_049,"Tiền đặt cọc có được trừ vào hóa đơn không?","Có. Tiền cọc sẽ được trừ trực tiếp vào tổng hóa đơn thanh toán sau bữa ăn.",PAYMENT
+FAQ_050,"Tại sao tôi bị trừ tiền mà đơn lỗi?","Đừng lo, hệ thống sẽ tự động hoàn tiền trong 24h nếu đơn hàng không được ghi nhận.",PAYMENT
+FAQ_051,"Làm sao để liên kết thẻ ngân hàng?","Vào mục 'Ví của tôi' -> 'Liên kết thẻ' và làm theo hướng dẫn bảo mật.",PAYMENT
+FAQ_052,"Có hỗ trợ trả góp không?","Hiện tại hệ thống chưa hỗ trợ trả góp cho dịch vụ ăn uống.",PAYMENT
+FAQ_053,"Phí dịch vụ trên app là gì?","Đó là khoản phí nhỏ để duy trì nền tảng (nếu có), sẽ hiển thị rõ trước khi bạn thanh toán.",PAYMENT
+FAQ_054,"Tôi có mã giảm giá nhưng không dùng được.","Vui lòng kiểm tra hạn sử dụng, điều kiện áp dụng (mức chi tiêu tối thiểu) của mã.",LOYALTY
+FAQ_055,"Điểm thưởng dùng để làm gì?","Điểm thưởng dùng để đổi voucher ăn uống, quà tặng hoặc trừ trực tiếp vào đơn sau.",LOYALTY
+FAQ_056,"Điểm thưởng có hết hạn không?","Điểm thưởng thường có hạn 12 tháng kể từ ngày tích lũy.",LOYALTY
+FAQ_057,"Làm sao để thăng hạng thành viên?","Bạn cần tích lũy đủ số điểm hoặc số lần đặt bàn theo quy định để lên hạng Bạc, Vàng, Kim Cương.",LOYALTY
+FAQ_058,"Quyền lợi của thành viên VIP là gì?","Thành viên VIP được ưu tiên xếp bàn, tặng món, và có voucher sinh nhật giá trị cao.",LOYALTY
+FAQ_059,"Tôi giới thiệu bạn bè có được quà không?","Có. Bạn nhận được điểm thưởng khi bạn bè đăng ký và hoàn thành đơn đặt bàn đầu tiên.",LOYALTY
+FAQ_060,"Voucher có áp dụng ngày lễ không?","Thường voucher không áp dụng dịp Lễ/Tết, vui lòng đọc kỹ điều kiện vé.",LOYALTY
+FAQ_061,"Tôi cần hỗ trợ kỹ thuật gấp.","Vui lòng gọi hotline kỹ thuật [Số Hotline] hoạt động 24/7.",SUPPORT
+FAQ_062,"Web bị lỗi không truy cập được.","Bạn thử xóa cache trình duyệt hoặc thử lại sau ít phút. Chúng tôi đang kiểm tra hệ thống.",SUPPORT
+FAQ_063,"Làm sao để gửi góp ý cho App?","Bạn vào mục 'Cài đặt' -> 'Góp ý' để gửi phản hồi cho đội ngũ phát triển.",SUPPORT
+FAQ_064,"Tôi muốn hợp tác làm đối tác nhà hàng.","Vui lòng truy cập trang 'Dành cho Đối tác' và điền form đăng ký, chúng tôi sẽ liên hệ lại.",SUPPORT
+FAQ_065,"Liên hệ bộ phận kinh doanh qua đâu?","Email bộ phận kinh doanh là: business@domain.com.",SUPPORT
+FAQ_066,"Tổng đài CSKH làm việc giờ nào?","Tổng đài hoạt động từ 8:00 đến 22:00 tất cả các ngày trong tuần.",SUPPORT
+FAQ_067,"Có ứng dụng trên điện thoại không?","Có ạ. Bạn tải app trên App Store hoặc Google Play để đặt bàn tiện hơn.",SYSTEM
+FAQ_068,"App có hỗ trợ tiếng Anh không?","Có. Bạn có thể đổi ngôn ngữ trong phần Cài đặt.",SYSTEM
+FAQ_069,"Tôi muốn tìm nhà hàng gần đây.","Hãy bật định vị GPS và chọn 'Gần tôi' trên trang chủ.",SYSTEM
+FAQ_070,"Làm sao lọc nhà hàng theo giá tiền?","Sử dụng bộ lọc giá ($ - $$$$$) để tìm quán phù hợp túi tiền.",SYSTEM
+FAQ_071,"Tôi muốn tìm quán có ghế trẻ em.","Trong bộ lọc 'Tiện ích', hãy tích chọn 'Ghế trẻ em'.",SYSTEM
+FAQ_072,"Làm sao biết nhà hàng có chỗ đậu ô tô?","Thông tin tiện ích 'Đỗ ô tô' được hiển thị ngay trên trang chi tiết nhà hàng.",SYSTEM
+FAQ_073,"Có thể lưu nhà hàng yêu thích không?","Được. Bạn nhấn icon trái tim để lưu vào danh sách Yêu thích.",SYSTEM
+FAQ_074,"Web này của công ty nào?","Đây là sản phẩm của công ty công nghệ [Tên Công Ty].",SYSTEM
+FAQ_075,"Tôi muốn hủy nhận email quảng cáo.","Bạn nhấn 'Unsubscribe' ở cuối email hoặc tắt trong cài đặt thông báo.",ACCOUNT
+FAQ_076,"Quy định về mang đồ uống từ ngoài vào?","Thông tin phí rượu (corkage fee) thường ghi trong chi tiết nhà hàng, hoặc bạn nên hỏi trước.",BOOKING
+FAQ_077,"Làm sao biết quán nào đang có khuyến mãi?","Bạn vào mục 'Ưu đãi hot' để xem danh sách nhà hàng đang giảm giá.",SYSTEM
+FAQ_078,"Có thể đặt bàn giúp sếp không?","Được ạ, bạn nhớ điền tên sếp vào thông tin người nhận bàn.",BOOKING
+FAQ_079,"Tôi muốn xem thực đơn trước.","Hầu hết nhà hàng trên hệ thống đều có đính kèm ảnh Menu.",BOOKING
+FAQ_080,"Hệ thống có nhắc lịch hẹn không?","Có. Hệ thống sẽ gửi thông báo nhắc nhở trước giờ ăn 30-60 phút.",SYSTEM
+FAQ_081,"Tôi quên mật khẩu, lấy lại bằng số điện thoại được không?","Được ạ, bạn chọn 'Quên mật khẩu' rồi nhập số điện thoại để nhận mã xác thực.",ACCOUNT
+FAQ_082,"Tại sao tài khoản của tôi bị tạm khóa?","Có thể do nhập sai mật khẩu quá nhiều lần hoặc vi phạm chính sách cộng đồng.",ACCOUNT
+FAQ_083,"Tôi muốn thay đổi email liên kết.","Bạn vào mục 'Hồ sơ cá nhân' để cập nhật địa chỉ email mới.",ACCOUNT
+FAQ_084,"Đăng ký thành viên có cần CMND không?","Không ạ, chỉ cần số điện thoại và email là đủ.",ACCOUNT
+FAQ_085,"Làm sao để biết tài khoản đã được xác thực?","Tài khoản đã xác thực sẽ có dấu tích xanh bên cạnh tên hiển thị.",ACCOUNT
+FAQ_086,"Tôi có thể dùng chung tài khoản với người khác không?","Chúng tôi khuyến khích mỗi người dùng một tài khoản riêng để bảo mật và tích điểm chính xác.",ACCOUNT
+FAQ_087,"Làm thế nào để cập nhật ngày sinh nhật?","Bạn vào chỉnh sửa hồ sơ để thêm ngày sinh và nhận quà ưu đãi.",ACCOUNT
+FAQ_088,"Tôi không đăng nhập được dù đúng mật khẩu.","Hãy kiểm tra lại phím CapsLock hoặc liên hệ CSKH để được hỗ trợ.",ACCOUNT
+FAQ_089,"Có thể đăng xuất từ xa không?","Bạn có thể đổi mật khẩu, hệ thống sẽ tự động đăng xuất các thiết bị cũ.",ACCOUNT
+FAQ_090,"Làm sao để kiểm tra hạng thành viên hiện tại?","Hạng thành viên hiển thị ngay trang chủ tài khoản của bạn.",LOYALTY
+FAQ_091,"Tôi muốn đặt tiệc công ty quy mô lớn.","Vui lòng điền form 'Đặt tiệc' để nhân viên tư vấn liên hệ báo giá riêng.",BOOKING
+FAQ_092,"Có thể đặt 2 nhà hàng cùng lúc không?","Bạn có thể tạo nhiều đơn đặt bàn khác nhau miễn là không trùng giờ.",BOOKING
+FAQ_093,"Làm sao biết nhà hàng đã xác nhận đơn?","Bạn sẽ nhận được thông báo 'Đặt chỗ thành công' qua ứng dụng.",BOOKING
+FAQ_094,"Tôi đặt bàn nhưng không thấy mã đơn hàng.","Mã đơn hàng nằm trong phần 'Chi tiết đặt chỗ' và trong email xác nhận.",BOOKING
+FAQ_095,"Có thể yêu cầu trang trí bàn tiệc không?","Bạn hãy ghi chú yêu cầu trang trí, nhà hàng sẽ liên hệ xác nhận chi phí (nếu có).",BOOKING
+FAQ_096,"Đặt bàn qua app có chắc chắn có chỗ không?","Khi nhận được thông báo 'Thành công', nghĩa là chỗ của bạn đã được giữ.",BOOKING
+FAQ_097,"Tôi muốn đổi ngày đặt sang tuần sau.","Bạn vào đơn hàng hiện tại, chọn 'Đổi lịch' và chọn ngày mới.",BOOKING
+FAQ_098,"Nhà hàng có giữ bàn nếu tôi đến muộn không?","Thường chỉ giữ 15 phút. Bạn nên gọi báo trước nếu trễ.",BOOKING
+FAQ_099,"Tôi muốn đặt bàn ở khu vực hút thuốc.","Hãy tìm nhà hàng có tiện ích 'Khu vực hút thuốc' hoặc ghi chú khi đặt.",BOOKING
+FAQ_100,"Làm sao để hủy đặt bàn tự động?","Hệ thống không tự hủy, bạn phải thao tác hủy thủ công trên app.",BOOKING
+FAQ_101,"Tôi có thể trả trước tiền ăn không?","Bạn có thể chọn thanh toán trước qua thẻ/ví điện tử nếu nhà hàng hỗ trợ.",PAYMENT
+FAQ_102,"Hoàn tiền vào ví mất bao lâu?","Thường từ 1-3 ngày làm việc tùy ngân hàng.",PAYMENT
+FAQ_103,"Tôi bị trừ tiền 2 lần cho 1 đơn.","Hãy gửi mã giao dịch cho bộ phận hỗ trợ để được kiểm tra và hoàn tiền thừa.",PAYMENT
+FAQ_104,"Có hỗ trợ thanh toán Apple Pay không?","Có, nếu bạn đặt qua ứng dụng trên iOS.",PAYMENT
+FAQ_105,"Tại sao tôi không thể chọn thanh toán khi đến nơi?","Một số nhà hàng hot hoặc giờ cao điểm bắt buộc phải đặt cọc trước.",PAYMENT
+FAQ_106,"Tôi cần xuất hóa đơn VAT điện tử.","Hệ thống hỗ trợ gửi yêu cầu xuất hóa đơn điện tử tới nhà hàng.",PAYMENT
+FAQ_107,"Phí giữ chỗ là bao nhiêu?","Phí giữ chỗ tùy thuộc vào quy định từng nhà hàng, thường được trừ vào hóa đơn.",PAYMENT
+FAQ_108,"Có thể thanh toán bằng thẻ Amex không?","Hệ thống chấp nhận hầu hết các loại thẻ quốc tế bao gồm Visa, Master, JCB.",PAYMENT
+FAQ_109,"Làm sao để thêm thẻ thanh toán mới?","Vào mục 'Thanh toán', chọn 'Thêm phương thức mới'.",PAYMENT
+FAQ_110,"Thông tin thẻ của tôi có an toàn không?","Dữ liệu thẻ được mã hóa chuẩn quốc tế PCI DSS, tuyệt đối an toàn.",PAYMENT
+FAQ_111,"Điểm tích lũy tính như thế nào?","Thường là 1.000đ chi tiêu = 1 điểm (tùy chính sách từng thời điểm).",LOYALTY
+FAQ_112,"Làm sao để đổi điểm lấy quà?","Vào kho 'Quà tặng', chọn quà tương ứng với số điểm và bấm 'Đổi ngay'.",LOYALTY
+FAQ_113,"Voucher giảm giá có hạn dùng không?","Có, hạn sử dụng ghi rõ trên voucher.",LOYALTY
+FAQ_114,"Tại sao tôi không được cộng điểm sau khi ăn?","Điểm được cộng sau khi nhà hàng xác nhận bạn đã hoàn thành bữa ăn (thường sau 24h).",LOYALTY
+FAQ_115,"Có thể tặng điểm cho bạn bè không?","Hiện tại hệ thống chưa hỗ trợ chuyển điểm giữa các tài khoản.",LOYALTY
+FAQ_116,"Voucher có áp dụng cùng các khuyến mãi khác không?","Thường là không, trừ khi có ghi chú 'Được áp dụng đồng thời'.",LOYALTY
+FAQ_117,"Làm sao để biết tôi có voucher nào?","Kiểm tra trong mục 'Ví voucher' của bạn.",LOYALTY
+FAQ_118,"Mã giới thiệu nhập ở đâu?","Bạn nhập mã giới thiệu ở bước đăng ký tài khoản mới.",LOYALTY
+FAQ_119,"Hạng thành viên có bị hạ không?","Có, nếu trong kỳ xét hạng bạn không đạt đủ chi tiêu tối thiểu.",LOYALTY
+FAQ_120,"Làm sao nhận thông báo khuyến mãi mới nhất?","Hãy bật thông báo ứng dụng để không bỏ lỡ deal hot.",LOYALTY
+FAQ_121,"Tôi gọi hotline nhưng máy bận.","Do lượng cuộc gọi cao, bạn vui lòng chờ hoặc nhắn tin qua Live Chat.",SUPPORT
+FAQ_122,"Gửi email hỗ trợ bao lâu thì được phản hồi?","Chúng tôi thường phản hồi trong vòng 24 giờ làm việc.",SUPPORT
+FAQ_123,"Tôi muốn báo cáo lỗi ứng dụng.","Hãy chụp màn hình lỗi và gửi qua mục 'Báo lỗi' trong cài đặt.",SUPPORT
+FAQ_124,"Có chat trực tuyến với nhân viên không?","Có, bạn bấm vào biểu tượng Chat ở góc màn hình.",SUPPORT
+FAQ_125,"Tôi muốn khiếu nại về vệ sinh nhà hàng.","Vui lòng gửi phản hồi chi tiết kèm hình ảnh (nếu có), chúng tôi sẽ làm việc với đối tác.",SUPPORT
+FAQ_126,"Làm sao để xóa lịch sử chat?","Hiện tại hệ thống chưa hỗ trợ xóa lịch sử chat hỗ trợ.",SUPPORT
+FAQ_127,"Có văn phòng đại diện để đến trực tiếp không?","Chúng tôi hỗ trợ online là chủ yếu. Văn phòng chỉ dành cho đối tác.",SUPPORT
+FAQ_128,"Tôi muốn sửa đánh giá nhà hàng.","Bạn có thể sửa đánh giá 1 lần trong vòng 7 ngày sau khi đăng.",SUPPORT
+FAQ_129,"Tại sao tài khoản tôi bị chặn bình luận?","Do vi phạm quy tắc cộng đồng (ngôn từ không phù hợp, spam).",SUPPORT
+FAQ_130,"Hướng dẫn sử dụng cho người mới.","Bạn có thể xem video hướng dẫn tại mục 'Trợ giúp'.",SUPPORT
+FAQ_131,"Ứng dụng có tốn dung lượng nhiều không?","App được tối ưu hóa nhẹ nhàng, không chiếm nhiều bộ nhớ.",SYSTEM
+FAQ_132,"Có cần bật định vị khi dùng app không?","Nên bật định vị để tìm nhà hàng gần bạn chính xác nhất.",SYSTEM
+FAQ_133,"Web có giao diện tối (Dark Mode) không?","Hiện tại chưa hỗ trợ Dark Mode trên web, chỉ có trên App.",SYSTEM
+FAQ_134,"Tôi muốn thay đổi ngôn ngữ sang tiếng Việt.","Vào Cài đặt -> Ngôn ngữ -> Chọn Tiếng Việt.",SYSTEM
+FAQ_135,"Làm sao để chia sẻ nhà hàng cho bạn bè?","Nhấn nút 'Chia sẻ' (icon mũi tên) trên trang nhà hàng để gửi link.",SYSTEM
+FAQ_136,"Danh sách yêu thích lưu được bao nhiêu quán?","Không giới hạn số lượng quán trong danh sách yêu thích.",SYSTEM
+FAQ_137,"Làm sao xem bản đồ đường đi?","Nhấn vào địa chỉ nhà hàng, hệ thống sẽ mở Google Maps chỉ đường.",SYSTEM
+FAQ_138,"Có thể đặt bàn trên máy tính không?","Được, website hỗ trợ đầy đủ tính năng như trên app.",SYSTEM
+FAQ_139,"Tại sao hình ảnh nhà hàng không hiển thị?","Vui lòng kiểm tra kết nối mạng của bạn.",SYSTEM
+FAQ_140,"Hệ thống có cập nhật menu thường xuyên không?","Menu được các đối tác nhà hàng cập nhật liên tục.",SYSTEM
+FAQ_141,"Tôi muốn đổi mật khẩu mới.","Vào 'Cài đặt tài khoản' -> 'Đổi mật khẩu' -> Nhập mật khẩu cũ và mới.",ACCOUNT
+FAQ_142,"Tại sao tôi phải xác thực số điện thoại?","Để bảo mật tài khoản và nhận thông báo về đơn đặt bàn.",ACCOUNT
+FAQ_143,"Tôi có thể dùng 2 email cho 1 tài khoản không?","Không, mỗi tài khoản chỉ liên kết với 1 email duy nhất.",ACCOUNT
+FAQ_144,"Làm sao kiểm tra thông tin cá nhân?","Vào mục 'Hồ sơ' để xem và chỉnh sửa thông tin.",ACCOUNT
+FAQ_145,"Tôi bị mất điện thoại, làm sao khóa tài khoản?","Hãy liên hệ ngay hotline để chúng tôi hỗ trợ khóa tạm thời.",ACCOUNT
+FAQ_146,"Lịch sử giao dịch được lưu bao lâu?","Hệ thống lưu trữ lịch sử giao dịch trong 12 tháng gần nhất.",ACCOUNT
+FAQ_147,"Tôi muốn tắt thông báo đẩy.","Vào Cài đặt -> Thông báo -> Tắt các mục không cần thiết.",ACCOUNT
+FAQ_148,"Có thể liên kết tài khoản Instagram không?","Hiện tại chỉ hỗ trợ liên kết Facebook và Google.",ACCOUNT
+FAQ_149,"Tôi muốn xem điều khoản sử dụng.","Link 'Điều khoản sử dụng' nằm ở chân trang website.",ACCOUNT
+FAQ_150,"Làm sao biết ai đang đăng nhập tài khoản của tôi?","Vào phần 'Quản lý thiết bị' để xem danh sách đăng nhập.",ACCOUNT
+FAQ_151,"Tôi đặt bàn nhưng nhà hàng đóng cửa.","Vui lòng báo lại cho chúng tôi để được đền bù voucher xin lỗi.",BOOKING
+FAQ_152,"Có thể đặt bàn ngoài trời không?","Bạn chọn bộ lọc 'Ngoài trời' khi tìm kiếm nhà hàng.",BOOKING
+FAQ_153,"Làm sao biết nhà hàng có ghế sofa?","Xem phần 'Tiện ích' hoặc hình ảnh không gian của nhà hàng.",BOOKING
+FAQ_154,"Tôi muốn đặt bàn ở tầng thượng (Rooftop).","Hãy tìm từ khóa 'Rooftop' trên thanh tìm kiếm.",BOOKING
+FAQ_155,"Có giới hạn thời gian ngồi ăn không?","Một số nhà hàng buffet có giới hạn giờ, thông tin này ghi rõ trong chi tiết.",BOOKING
+FAQ_156,"Tôi muốn đặt combo khuyến mãi.","Chọn combo mong muốn trong menu khi đặt bàn.",BOOKING
+FAQ_157,"Làm sao để biết nhà hàng phù hợp hẹn hò?","Xem các bộ sưu tập 'Lãng mạn' hoặc 'Hẹn hò' trên trang chủ.",BOOKING
+FAQ_158,"Có cần in phiếu đặt bàn không?","Không cần, chỉ cần đưa mã đơn hàng trên điện thoại cho lễ tân.",BOOKING
+FAQ_159,"Tôi đặt bàn cho người nước ngoài.","Giao diện có tiếng Anh để bạn dễ dàng thao tác.",BOOKING
+FAQ_160,"Làm sao biết nhà hàng có nhạc sống?","Tìm các quán có tag 'Live Music' hoặc 'Nhạc sống'.",BOOKING
+FAQ_161,"Thanh toán lỗi nhưng tiền vẫn bị trừ.","Hệ thống sẽ tự động hoàn tiền treo (reversal) trong vài giờ.",PAYMENT
+FAQ_162,"Có xuất hóa đơn cho cá nhân không?","Có, miễn là bạn yêu cầu trước khi thanh toán.",PAYMENT
+FAQ_163,"Tôi muốn xóa thẻ đã lưu.","Vào 'Phương thức thanh toán', vuốt trái thẻ cần xóa và chọn 'Xóa'.",PAYMENT
+FAQ_164,"Có phí ẩn nào không?","Giá hiển thị là giá ước tính, hóa đơn cuối cùng theo thực tế sử dụng.",PAYMENT
+FAQ_165,"Ví điện tử nào được hỗ trợ?","Momo, ZaloPay, ShopeePay, ViettelMoney.",PAYMENT
+FAQ_166,"Tôi có thể chuyển khoản trực tiếp cho nhà hàng không?","Nếu đặt qua hệ thống, bạn nên thanh toán qua cổng của chúng tôi để được đảm bảo.",PAYMENT
+FAQ_167,"Tại sao mã giảm giá không trừ tiền?","Có thể mã chỉ áp dụng cho món ăn, không áp dụng cho đồ uống hoặc phí dịch vụ.",PAYMENT
+FAQ_168,"Tiền hoàn về ví dùng để làm gì?","Dùng để thanh toán cho các đơn đặt bàn tiếp theo.",PAYMENT
+FAQ_169,"Có quy định mức cọc tối thiểu không?","Mức cọc thường là 10-20% giá trị dự kiến hoặc số tiền cố định/người.",PAYMENT
+FAQ_170,"Tôi muốn xem bảng giá chi tiết.","Vui lòng xem trong mục 'Thực đơn' của nhà hàng.",PAYMENT
+FAQ_171,"Làm sao biết voucher nào sắp hết hạn?","Trong 'Ví voucher', các mã sắp hết hạn sẽ được xếp lên đầu.",LOYALTY
+FAQ_172,"Có được cộng dồn điểm từ nhiều tài khoản không?","Không, điểm thưởng gắn liền với từng tài khoản riêng biệt.",LOYALTY
+FAQ_173,"Sinh nhật tôi được tặng gì?","Thành viên thường được tặng voucher hoặc bánh kem tùy hạng.",LOYALTY
+FAQ_174,"Tại sao tôi bị trừ điểm thưởng?","Điểm thưởng quá hạn sẽ tự động bị hủy.",LOYALTY
+FAQ_175,"Chương trình khách hàng thân thiết có mất phí tham gia không?","Không, tham gia hoàn toàn miễn phí.",LOYALTY
+FAQ_176,"Làm sao để kiếm nhiều điểm hơn?","Đặt bàn thường xuyên, viết đánh giá, mời bạn bè.",LOYALTY
+FAQ_177,"Tôi đổi quà nhưng không dùng, có được trả lại điểm không?","Quà đã đổi không thể hoàn lại điểm.",LOYALTY
+FAQ_178,"Hạng thành viên được giữ trong bao lâu?","Hạng thành viên được xét lại mỗi 6 tháng hoặc 1 năm.",LOYALTY
+FAQ_179,"Voucher giảm theo % hay số tiền?","Có cả hai loại voucher, chi tiết ghi trên thẻ voucher.",LOYALTY
+FAQ_180,"Tôi có thể cho người khác mã voucher của mình không?","Nếu là mã chung thì được, nếu là mã cá nhân trong ví thì không chuyển nhượng được.",LOYALTY
+FAQ_181,"Gửi feedback ẩn danh được không?","Được, bạn có thể chọn chế độ 'Ẩn danh' khi viết đánh giá.",SUPPORT
+FAQ_182,"Tôi muốn làm việc tại công ty.","Xem mục 'Tuyển dụng' ở cuối trang web.",SUPPORT
+FAQ_183,"Thời gian phản hồi khiếu nại là bao lâu?","Tối đa 48 giờ làm việc.",SUPPORT
+FAQ_184,"Tôi cần hướng dẫn sử dụng voucher.","Bấm vào chi tiết voucher để xem hướng dẫn cách dùng.",SUPPORT
+FAQ_185,"Có hỗ trợ đặt bàn qua chat không?","Hiện tại chúng tôi khuyến khích đặt qua form để chính xác thông tin.",SUPPORT
+FAQ_186,"Tôi muốn report nhà hàng lừa đảo.","Vui lòng cung cấp bằng chứng qua email hỗ trợ khẩn cấp.",SUPPORT
+FAQ_187,"Tổng đài có miễn phí cước gọi không?","Cước phí tính theo quy định của nhà mạng viễn thông.",SUPPORT
+FAQ_188,"Làm sao biết phản hồi của tôi đã được ghi nhận?","Bạn sẽ nhận được email xác nhận kèm mã số ticket hỗ trợ.",SUPPORT
+FAQ_189,"Tôi muốn đề xuất tính năng mới.","Rất hoan nghênh, hãy gửi ý kiến qua mục Góp ý.",SUPPORT
+FAQ_190,"Nhân viên hỗ trợ có nói tiếng Anh không?","Đội ngũ CSKH có hỗ trợ tiếng Anh và tiếng Việt.",SUPPORT
+FAQ_191,"App yêu cầu quyền truy cập gì?","Vị trí (để tìm quán), Camera (để quét QR), Thông báo.",SYSTEM
+FAQ_192,"Web có tương thích với điện thoại không?","Giao diện web được tối ưu (Responsive) cho mọi thiết bị di động.",SYSTEM
+FAQ_193,"Làm sao để biết phiên bản app hiện tại?","Vào Cài đặt -> Giới thiệu chung để xem version.",SYSTEM
+FAQ_194,"Tại sao định vị sai vị trí của tôi?","Hãy kiểm tra lại cài đặt GPS trên điện thoại của bạn.",SYSTEM
+FAQ_195,"Tôi muốn xem các nhà hàng mới lên sàn.","Vào mục 'Mới nhất' trên trang chủ.",SYSTEM
+FAQ_196,"Bộ lọc tìm kiếm có lưu lại không?","Không, bộ lọc sẽ reset sau mỗi lần tìm kiếm mới.",SYSTEM
+FAQ_197,"Làm sao chia sẻ mã giảm giá cho bạn bè?","Copy mã và gửi qua tin nhắn hoặc mạng xã hội.",SYSTEM
+FAQ_198,"Hệ thống bảo trì khi nào?","Chúng tôi thường bảo trì vào ban đêm và có thông báo trước.",SYSTEM
+FAQ_199,"Tôi không xem được ảnh món ăn.","Có thể do đường truyền mạng chậm, hãy thử tải lại trang.",SYSTEM
+FAQ_200,"Làm thế nào để tải lại trang bị treo?","Nhấn F5 trên máy tính hoặc vuốt xuống trên điện thoại.",SYSTEM
+FAQ_201,"Cách đăng ký tài khoản doanh nghiệp?","Vui lòng liên hệ bộ phận B2B để được hướng dẫn tạo tài khoản doanh nghiệp.",ACCOUNT
+FAQ_202,"Tôi có thể đổi tên hiển thị không?","Được, bạn vào hồ sơ cá nhân để sửa tên hiển thị (Nickname).",ACCOUNT
+FAQ_203,"Mật khẩu cần bao nhiêu ký tự?","Mật khẩu cần tối thiểu 8 ký tự, bao gồm chữ và số.",ACCOUNT
+FAQ_204,"Tại sao tài khoản của tôi bị đăng xuất liên tục?","Có thể do bạn đổi mật khẩu hoặc đăng nhập trên thiết bị khác.",ACCOUNT
+FAQ_205,"Làm sao để xác minh danh tính?","Chúng tôi chưa yêu cầu xác minh danh tính (KYC) đối với người dùng thông thường.",ACCOUNT
+FAQ_206,"Tôi muốn ẩn thông tin cá nhân.","Bạn có thể ẩn ngày sinh và giới tính trong phần cài đặt quyền riêng tư.",ACCOUNT
+FAQ_207,"Có thể dùng số điện thoại nước ngoài đăng ký không?","Hệ thống hỗ trợ các đầu số quốc tế phổ biến.",ACCOUNT
+FAQ_208,"Làm sao biết email nào đang liên kết?","Vào mục 'Thông tin tài khoản' sẽ hiện email (đã che một phần).",ACCOUNT
+FAQ_209,"Tôi muốn nhận thông báo qua Zalo.","Hãy liên kết tài khoản Zalo trong phần Cài đặt liên kết.",ACCOUNT
+FAQ_210,"Xóa tài khoản rồi có đăng ký lại bằng SĐT cũ được không?","Được, nhưng dữ liệu cũ sẽ không được khôi phục.",ACCOUNT
+FAQ_211,"Tôi muốn đặt bàn cho tuần sau.","Bạn chọn ngày trên lịch khi đặt bàn, hệ thống cho phép chọn ngày trong tương lai.",BOOKING
+FAQ_212,"Nhà hàng có chỗ chơi cho trẻ em không?","Sử dụng bộ lọc 'Khu vui chơi trẻ em' để tìm quán phù hợp.",BOOKING
+FAQ_213,"Làm sao biết giá buffet?","Giá buffet được ghi rõ trong menu hoặc phần giới thiệu nhà hàng.",BOOKING
+FAQ_214,"Tôi muốn đặt phòng hội nghị.","Hãy tìm các nhà hàng có tiện ích 'Phòng hội nghị' hoặc 'Sự kiện'.",BOOKING
+FAQ_215,"Có thể đặt bàn vào giờ đóng cửa không?","Không, hệ thống chỉ cho phép chọn giờ trong thời gian hoạt động.",BOOKING
+FAQ_216,"Tôi muốn hủy 1 phần đơn hàng (giảm số người).","Hãy sửa đơn đặt bàn thay vì hủy toàn bộ.",BOOKING
+FAQ_217,"Nhà hàng có cho mang thú cưng không?","Xem mục tiện ích 'Thú cưng' hoặc ghi chú 'Pet-friendly'.",BOOKING
+FAQ_218,"Làm sao biết bàn nào view đẹp?","Bạn có thể xem ảnh không gian quán hoặc gọi hỏi trực tiếp.",BOOKING
+FAQ_219,"Tôi đặt bàn rồi nhưng quán báo hết chỗ.","Trường hợp hiếm gặp này, CSKH sẽ hỗ trợ bạn tìm quán khác và đền bù.",BOOKING
+FAQ_220,"Có cần đặt trước vào ngày thường không?","Nên đặt trước để đảm bảo có chỗ và nhận ưu đãi, dù là ngày thường.",BOOKING
+FAQ_221,"Tôi có thể trả bằng tiền mặt không?","Được, hầu hết nhà hàng vẫn nhận tiền mặt.",PAYMENT
+FAQ_222,"Làm sao lấy lại tiền thừa khi thanh toán online?","Tiền thừa sẽ được hoàn về nguồn thanh toán gốc.",PAYMENT
+FAQ_223,"Hệ thống có lưu thông tin thẻ tín dụng không?","Chúng tôi không lưu, cổng thanh toán đối tác sẽ xử lý việc này bảo mật.",PAYMENT
+FAQ_224,"Tại sao thanh toán bị từ chối?","Kiểm tra số dư, hạn mức thẻ hoặc kết nối internet.",PAYMENT
+FAQ_225,"Có phí chuyển đổi ngoại tệ không?","Nếu dùng thẻ quốc tế, ngân hàng phát hành thẻ có thể thu phí chuyển đổi.",PAYMENT
+FAQ_226,"Tôi muốn xóa lịch sử thanh toán.","Vì lý do minh bạch tài chính, không thể xóa lịch sử giao dịch.",PAYMENT
+FAQ_227,"Có thể tách hóa đơn thanh toán không?","Việc tách hóa đơn phụ thuộc vào phần mềm của nhà hàng, bạn hỏi nhân viên tại quán nhé.",PAYMENT
+FAQ_228,"Tôi nạp tiền vào ví app được không?","Hiện tại chưa hỗ trợ ví nội bộ, bạn thanh toán trực tiếp từng đơn.",PAYMENT
+FAQ_229,"Làm sao biết đơn hàng đã thanh toán chưa?","Trạng thái đơn sẽ hiện 'Đã thanh toán' hoặc 'Chờ thanh toán'.",PAYMENT
+FAQ_230,"Quên thanh toán tại quán thì sao?","Nhà hàng sẽ liên hệ bạn, hoặc chúng tôi sẽ hỗ trợ nhắc nhở.",PAYMENT
+FAQ_231,"Hạng Kim Cương cần bao nhiêu điểm?","Cần tích lũy 10.000 điểm hoặc chi tiêu 20 triệu/năm.",LOYALTY
+FAQ_232,"Đổi voucher xong có hủy được không?","Voucher đã đổi không thể hủy và không hoàn lại điểm.",LOYALTY
+FAQ_233,"Tôi có 2 tài khoản, gộp điểm được không?","Không hỗ trợ gộp điểm giữa các tài khoản.",LOYALTY
+FAQ_234,"Voucher hiển thị 'Hết lượt dùng' là sao?","Nghĩa là số lượng mã khuyến mãi đợt này đã được các khách hàng khác dùng hết.",LOYALTY
+FAQ_235,"Làm sao nhận quà sinh nhật?","Voucher sinh nhật tự động gửi vào ví của bạn vào tháng sinh nhật.",LOYALTY
+FAQ_236,"Điểm thưởng có quy đổi ra tiền mặt không?","Không, điểm chỉ dùng để đổi ưu đãi trên hệ thống.",LOYALTY
+FAQ_237,"Tại sao tôi bị mất hạng thành viên?","Do không duy trì đủ mức chi tiêu trong kỳ xét hạng vừa qua.",LOYALTY
+FAQ_238,"Có ưu đãi cho chủ thẻ ngân hàng không?","Có, xem mục 'Ưu đãi đối tác' để thấy các ngân hàng liên kết.",LOYALTY
+FAQ_239,"Sự kiện nhân đôi điểm thưởng khi nào?","Thường diễn ra vào các ngày lễ lớn hoặc sinh nhật công ty.",LOYALTY
+FAQ_240,"Voucher có áp dụng cho đồ uống cồn không?","Tùy quy định pháp luật và nhà hàng, thường là không.",LOYALTY
+FAQ_241,"Tôi muốn khiếu nại về món ăn.","Hãy đánh giá thấp sao và viết chi tiết, hoặc liên hệ CSKH.",SUPPORT
+FAQ_242,"Làm sao liên hệ quản lý nhà hàng?","Chúng tôi sẽ chuyển lời của bạn tới quản lý nhà hàng, hoặc bạn gọi số hotline quán.",SUPPORT
+FAQ_243,"Tôi gặp lỗi khi nhập mã giảm giá.","Chụp màn hình lỗi và gửi cho hỗ trợ viên.",SUPPORT
+FAQ_244,"Thời gian giải quyết hoàn tiền quá lâu.","Vui lòng cung cấp mã đơn, chúng tôi sẽ thúc giục bên ngân hàng.",SUPPORT
+FAQ_245,"Tôi không hài lòng với cách giải quyết của CSKH.","Bạn có thể yêu cầu gặp quản lý cấp cao hơn qua email.",SUPPORT
+FAQ_246,"Có hỗ trợ người khiếm thị không?","Web có hỗ trợ trình đọc màn hình cơ bản.",SUPPORT
+FAQ_247,"Tôi muốn chat qua Facebook.","Truy cập Fanpage chính thức của chúng tôi để chat.",SUPPORT
+FAQ_248,"Làm sao để báo cáo review ảo?","Nhấn nút 'Báo cáo' ngay dưới bình luận nghi vấn.",SUPPORT
+FAQ_249,"Tôi cần xuất dữ liệu cá nhân.","Gửi yêu cầu qua email privacy@domain.com.",SUPPORT
+FAQ_250,"Đường dây nóng có hoạt động ngày Tết không?","Có, chúng tôi hỗ trợ xuyên Tết.",SUPPORT
+FAQ_251,"Ứng dụng bị văng (crash) liên tục.","Hãy cập nhật lên phiên bản mới nhất hoặc cài lại ứng dụng.",SYSTEM
+FAQ_252,"Làm sao xóa bộ nhớ đệm app?","Vào Cài đặt điện thoại -> Ứng dụng -> Xóa bộ nhớ đệm.",SYSTEM
+FAQ_253,"Web load chậm quá.","Có thể do đường truyền quốc tế hoặc server quá tải giờ cao điểm.",SYSTEM
+FAQ_254,"Tôi không thấy nút đặt bàn.","Có thể nhà hàng đang tạm đóng hoặc ngừng nhận khách online.",SYSTEM
+FAQ_255,"Làm sao bật định vị thủ công?","Chọn biểu tượng bản đồ và ghim vị trí của bạn.",SYSTEM
+FAQ_256,"Hình ảnh bị lỗi không xem được.","Chúng tôi sẽ kiểm tra lại server ảnh, cảm ơn bạn đã báo.",SYSTEM
+FAQ_257,"Làm sao tìm quán đang mở cửa?","Chọn bộ lọc 'Đang mở cửa' trong thanh tìm kiếm.",SYSTEM
+FAQ_258,"Tôi muốn xem thực đơn tiếng Anh.","Chuyển ngôn ngữ web sang English, menu sẽ tự dịch (nếu có dữ liệu).",SYSTEM
+FAQ_259,"Danh sách nhà hàng sắp xếp theo tiêu chí nào?","Mặc định là 'Gợi ý', bạn có thể xếp theo 'Gần nhất' hoặc 'Đánh giá cao'.",SYSTEM
+FAQ_260,"Làm sao tắt âm thanh thông báo app?","Vào Cài đặt ứng dụng -> Âm thanh & Rung -> Tắt.",SYSTEM
+FAQ_261,"Cách đăng ký làm shipper cho quán?","Hệ thống này chỉ đặt bàn, không cung cấp dịch vụ giao hàng.",SYSTEM
+FAQ_262,"Tôi là chủ nhà hàng, muốn đăng ký bán?","Vui lòng truy cập trang 'Dành cho Đối tác Merchant'.",SYSTEM
+FAQ_263,"Làm sao để biết quán nào có Wifi?","Xem mục Tiện ích, icon Wifi.",SYSTEM
+FAQ_264,"Tìm quán có máy lạnh ở đâu?","Lọc theo tiện ích 'Điều hòa/Máy lạnh'.",SYSTEM
+FAQ_265,"Tôi muốn tìm quán chay.","Gõ từ khóa 'Chay' hoặc chọn danh mục 'Ẩm thực chay'.",SYSTEM
+FAQ_266,"Làm sao biết quán có xuất hóa đơn đỏ?","Xem mục tiện ích 'Hóa đơn VAT'.",SYSTEM
+FAQ_267,"Tìm quán có Karaoke.","Chọn danh mục 'Giải trí' hoặc tiện ích 'Karaoke'.",SYSTEM
+FAQ_268,"Tôi muốn tìm Buffet hải sản.","Gõ 'Buffet hải sản' vào ô tìm kiếm.",SYSTEM
+FAQ_269,"Làm sao biết quán nào phù hợp trẻ em?","Lọc theo 'Phù hợp gia đình/trẻ em'.",SYSTEM
+FAQ_270,"Tìm quán có chỗ hút thuốc.","Lọc theo tiện ích 'Khu vực hút thuốc'.",SYSTEM
+FAQ_271,"Tôi muốn sửa số điện thoại nhận OTP.","Bạn phải dùng số cũ để nhận OTP đăng nhập rồi mới đổi được, hoặc liên hệ CSKH.",ACCOUNT
+FAQ_272,"Email xác nhận bị vào Spam.","Hãy đánh dấu 'Không phải Spam' để lần sau nhận thư vào Inbox.",ACCOUNT
+FAQ_273,"Tôi nhập sai mật khẩu 5 lần.","Tài khoản bị khóa tạm thời 30 phút, vui lòng thử lại sau.",ACCOUNT
+FAQ_274,"Làm sao biết tài khoản bị hack?","Kiểm tra lịch sử đăng nhập, nếu thấy thiết bị lạ hãy đổi mật khẩu ngay.",ACCOUNT
+FAQ_275,"Tôi muốn cập nhật giới tính.","Vào hồ sơ cá nhân để chọn Nam/Nữ/Khác.",ACCOUNT
+FAQ_276,"Tại sao tôi cần cung cấp ngày sinh?","Để nhận quà sinh nhật và xác nhận độ tuổi (với dịch vụ cồn).",ACCOUNT
+FAQ_277,"Làm sao gỡ liên kết Facebook?","Vào Cài đặt tài khoản -> Tài khoản liên kết -> Gỡ bỏ.",ACCOUNT
+FAQ_278,"Tôi muốn đăng ký nhận tin qua SMS.","Tích chọn 'Nhận thông báo qua SMS' trong cài đặt thông báo.",ACCOUNT
+FAQ_279,"Tại sao tôi không thấy lịch sử cũ?","Hệ thống chỉ hiển thị lịch sử 1 năm, liên hệ CSKH để trích xuất dữ liệu cũ hơn.",ACCOUNT
+FAQ_280,"Đổi điện thoại có mất dữ liệu không?","Không, chỉ cần đăng nhập lại đúng tài khoản là dữ liệu vẫn còn.",ACCOUNT
+FAQ_281,"Đặt bàn xong đến nơi quán đóng cửa.","Chúng tôi sẽ đền bù thỏa đáng và làm việc lại với đối tác.",BOOKING
+FAQ_282,"Tôi muốn đặt chỗ ngồi ngoài ban công.","Ghi chú 'Ban công' khi đặt, quán sẽ xếp nếu còn chỗ.",BOOKING
+FAQ_283,"Làm sao biết quán có ghế cao cho bé?","Xem tiện ích 'Ghế trẻ em' hoặc hỏi nhân viên.",BOOKING
+FAQ_284,"Tôi muốn đặt bàn xem bóng đá.","Tìm quán có 'Máy chiếu/K+', nên đặt sớm các ngày có trận đấu.",BOOKING
+FAQ_285,"Có thể đặt bàn vào đêm khuya không?","Tùy giờ mở cửa của quán, hệ thống hỗ trợ đặt 24/7.",BOOKING
+FAQ_286,"Tôi muốn đặt phòng riêng 10 người.","Tìm quán có 'Phòng riêng' và chọn số khách 10.",BOOKING
+FAQ_287,"Đặt bàn có kèm đặt món không?","Có thể chọn món trước nếu nhà hàng đã up menu lên hệ thống.",BOOKING
+FAQ_288,"Tôi muốn hủy 1 món trong đơn đặt trước.","Gọi ngay cho nhà hàng để báo hủy món trước khi họ chuẩn bị.",BOOKING
+FAQ_289,"Có thể đặt bàn giữ chỗ cả ngày không?","Thường không, nhà hàng chỉ giữ bàn theo khung giờ ăn (2-3 tiếng).",BOOKING
+FAQ_290,"Làm sao biết đơn hàng bị hủy lý do gì?","Lý do hủy sẽ được ghi trong thông báo hoặc email gửi bạn.",BOOKING
+FAQ_291,"Thanh toán bằng thẻ quốc tế có an toàn không?","Có, cổng thanh toán đạt chuẩn PCI DSS.",PAYMENT
+FAQ_292,"Tôi muốn xuất hóa đơn VAT cho công ty.","Nhập mã số thuế, tên công ty, địa chỉ vào phần yêu cầu hóa đơn.",PAYMENT
+FAQ_293,"Phí dịch vụ 5% là gì?","Là tiền tip bắt buộc hoặc phí phục vụ của nhà hàng, không phải của app.",PAYMENT
+FAQ_294,"Thuế VAT 8% hay 10%?","Tùy quy định hiện hành của nhà nước đối với ngành F&B.",PAYMENT
+FAQ_295,"Làm sao xóa thẻ Visa đã lưu?","Vào quản lý thanh toán để xóa.",PAYMENT
+FAQ_296,"Tôi bị trừ tiền cọc nhưng chưa nhận được xác nhận.","Liên hệ ngay CSKH để kiểm tra giao dịch treo.",PAYMENT
+FAQ_297,"Có thể thanh toán bằng điểm thưởng 100% không?","Thường chỉ thanh toán một phần, tùy chính sách đổi điểm.",PAYMENT
+FAQ_298,"Tại sao mã giảm giá không hợp lệ?","Có thể do chưa đủ giá trị đơn hàng tối thiểu hoặc mã đã hết hạn.",PAYMENT
+FAQ_299,"Hoàn tiền vào thẻ tín dụng mất bao lâu?","Thường từ 7-14 ngày làm việc tùy ngân hàng phát hành thẻ.",PAYMENT
+FAQ_300,"Tôi có thể trả tiền mặt khi đặt cọc không?","Không, đặt cọc online yêu cầu thanh toán trực tuyến.",PAYMENT
+FAQ_301,"Điểm thưởng có được hoàn lại khi hủy đơn không?","Nếu hủy đúng quy định, điểm thưởng và mã giảm giá sẽ được hoàn lại.",LOYALTY
+FAQ_302,"Tôi muốn xem lịch sử tích điểm.","Vào mục 'Điểm thưởng' -> 'Lịch sử'.",LOYALTY
+FAQ_303,"Làm sao để được thăng hạng nhanh?","Đặt bàn vào các ngày nhân đôi điểm hoặc giới thiệu nhiều bạn bè.",LOYALTY
+FAQ_304,"Voucher có áp dụng cho giao hàng không?","Voucher đặt bàn thường chỉ áp dụng ăn tại chỗ.",LOYALTY
+FAQ_305,"Tôi có thể mua điểm thưởng không?","Không, điểm thưởng chỉ có thể kiếm được qua chi tiêu.",LOYALTY
+FAQ_306,"Thẻ thành viên điện tử dùng thế nào?","Đưa mã QR thẻ thành viên trên app cho nhân viên quét khi thanh toán.",LOYALTY
+FAQ_307,"Quà đổi xong bao lâu thì nhận được?","Voucher điện tử nhận ngay lập tức, quà hiện vật sẽ được ship sau.",LOYALTY
+FAQ_308,"Tại sao tôi không thấy voucher sinh nhật?","Kiểm tra xem bạn đã cập nhật ngày sinh trước tháng sinh nhật chưa.",LOYALTY
+FAQ_309,"Hạng Vàng được giảm bao nhiêu %?","Hạng Vàng thường được giảm 10-15% tùy chương trình.",LOYALTY
+FAQ_310,"Có giới hạn số điểm tích lũy tối đa không?","Không giới hạn.",LOYALTY
+FAQ_311,"Tôi muốn khiếu nại nhân viên bảo vệ quán.","Ghi nhận, vui lòng gửi phản hồi chi tiết.",SUPPORT
+FAQ_312,"Gửi email hỗ trợ có cần tiêu đề không?","Nên ghi tiêu đề rõ ràng (ví dụ: Lỗi thanh toán - Mã đơn hàng...) để được xử lý nhanh.",SUPPORT
+FAQ_313,"Tôi muốn chat video với hỗ trợ viên.","Hiện chưa hỗ trợ chat video, chỉ chat text hoặc gọi thoại.",SUPPORT
+FAQ_314,"Thời gian hoàn tiền quá hạn cam kết.","Hãy liên hệ lại để chúng tôi tra soát với ngân hàng.",SUPPORT
+FAQ_315,"Tôi muốn rút lại khiếu nại.","Nhắn tin báo 'Đã giải quyết xong' vào ticket hỗ trợ.",SUPPORT
+FAQ_316,"Có hỗ trợ qua Zalo không?","Có, quét mã QR Zalo OA của chúng tôi để chat.",SUPPORT
+FAQ_317,"Tổng đài viên bận liên tục.","Bạn có thể để lại số điện thoại, chúng tôi sẽ gọi lại.",SUPPORT
+FAQ_318,"Làm sao để đánh giá nhân viên hỗ trợ?","Sau khi kết thúc chat/cuộc gọi sẽ có bảng đánh giá.",SUPPORT
+FAQ_319,"Tôi bị spam tin nhắn quảng cáo.","Hãy báo cáo spam hoặc tắt nhận tin quảng cáo.",SUPPORT
+FAQ_320,"Tôi muốn gặp trực tiếp người phụ trách.","Chúng tôi sẽ sắp xếp nếu vấn đề thực sự nghiêm trọng và cần thiết.",SUPPORT
+FAQ_321,"Tôi ở nước ngoài có dùng app được không?","Được, miễn là có kết nối internet.",SYSTEM
+FAQ_322,"App có tốn pin không?","App được tối ưu để tiết kiệm pin.",SYSTEM
+FAQ_323,"Làm sao cập nhật app?","Vào App Store/Google Play nhấn Cập nhật.",SYSTEM
+FAQ_324,"Tôi muốn xem các nhà hàng gần công ty.","Nhập địa chỉ công ty vào ô tìm kiếm vị trí.",SYSTEM
+FAQ_325,"Làm sao tắt quyền truy cập vị trí?","Vào cài đặt điện thoại -> Quyền riêng tư -> Tắt vị trí cho app.",SYSTEM
+FAQ_326,"Web bị lỗi font chữ.","Thử đổi trình duyệt hoặc kiểm tra encoding.",SYSTEM
+FAQ_327,"Tôi muốn tìm quán có chỗ sạc xe điện.","Tiện ích này đang được cập nhật, vui lòng hỏi trực tiếp quán.",SYSTEM
+FAQ_328,"Làm sao biết quán nào đang đông khách?","Xem lượt đặt bàn trong ngày hiển thị trên trang chủ.",SYSTEM
+FAQ_329,"Tìm quán theo tên món ăn được không?","Được, gõ tên món (ví dụ: Phở) vào ô tìm kiếm.",SYSTEM
+FAQ_330,"Tôi muốn tìm quán mở 24/24.","Lọc theo tiêu chí 'Mở cửa 24h'.",SYSTEM
+FAQ_331,"Làm sao lấy lại tài khoản khi mất SIM?","Gửi email yêu cầu hỗ trợ kèm ảnh CMND để đổi số điện thoại.",ACCOUNT
+FAQ_332,"Tôi muốn chặn thông báo từ 1 nhà hàng cụ thể.","Hiện chưa hỗ trợ chặn riêng lẻ, bạn chỉ có thể tắt thông báo chung.",ACCOUNT
+FAQ_333,"Tại sao tôi phải nhập Captcha?","Để xác nhận bạn không phải là robot.",ACCOUNT
+FAQ_334,"Mật khẩu cấp 2 là gì?","Là mã PIN bảo mật cho giao dịch thanh toán.",ACCOUNT
+FAQ_335,"Tôi muốn xem điều khoản bảo mật.","Link ở chân trang web.",ACCOUNT
+FAQ_336,"Làm sao biết tài khoản đã bị xóa chưa?","Thử đăng nhập lại, nếu hệ thống báo 'Tài khoản không tồn tại' là đã xóa.",ACCOUNT
+FAQ_337,"Có thể khôi phục tài khoản đã xóa không?","Trong vòng 30 ngày đầu thì được, sau đó sẽ xóa vĩnh viễn.",ACCOUNT
+FAQ_338,"Tôi muốn thay đổi địa chỉ mặc định.","Vào 'Sổ địa chỉ' trong cài đặt tài khoản.",ACCOUNT
+FAQ_339,"Tên đăng nhập có được trùng nhau không?","Không, mỗi tên đăng nhập là duy nhất.",ACCOUNT
+FAQ_340,"Tôi muốn nhận thông báo qua email.","Bật tùy chọn 'Nhận email newsletter'.",ACCOUNT
+FAQ_341,"Tôi muốn đặt bàn cho đoàn du lịch 50 người.","Liên hệ bộ phận khách đoàn để có giá tốt.",BOOKING
+FAQ_342,"Làm sao biết quán có nhận khách nước ngoài không?","Hầu hết đều nhận, bạn có thể xem review tiếng Anh.",BOOKING
+FAQ_343,"Tôi muốn đặt bàn ở góc yên tĩnh.","Ghi chú 'Yên tĩnh' hoặc 'Góc khuất'.",BOOKING
+FAQ_344,"Nhà hàng có hỗ trợ người khuyết tật không?","Xem tiện ích 'Lối đi xe lăn'.",BOOKING
+FAQ_345,"Tôi đặt nhầm ngày, sửa sao?","Vào đơn hàng -> Đổi lịch.",BOOKING
+FAQ_346,"Có thể đặt bàn hộ người yêu không?","Được, điền tên người yêu vào thông tin người nhận.",BOOKING
+FAQ_347,"Làm sao biết quán hết bàn?","Hệ thống sẽ ẩn giờ đó hoặc báo 'Hết chỗ'.",BOOKING
+FAQ_348,"Tôi muốn bao trọn nhà hàng.","Liên hệ hotline để book sảnh tiệc (Private booking).",BOOKING
+FAQ_349,"Có thể đặt món chay trước không?","Xem menu và chọn món chay.",BOOKING
+FAQ_350,"Nhà hàng có trang trí Valentine không?","Dịp lễ nhà hàng thường có trang trí sẵn.",BOOKING
+FAQ_351,"Thanh toán ZaloPay bị lỗi.","Kiểm tra số dư ví ZaloPay hoặc thử lại sau.",PAYMENT
+FAQ_352,"Tôi muốn lấy lại tiền thừa cọc.","Hệ thống tự hoàn sau khi trừ chi phí thực tế (nếu có).",PAYMENT
+FAQ_353,"Có thu phí khi thanh toán thẻ không?","Hệ thống không thu phí quẹt thẻ.",PAYMENT
+FAQ_354,"Tại sao không áp dụng được mã giảm giá?","Kiểm tra xem mã có áp dụng cho nhà hàng này không.",PAYMENT
+FAQ_355,"Tôi muốn thanh toán sau (PayLater).","Hiện chưa hỗ trợ PayLater.",PAYMENT
+FAQ_356,"Làm sao biết giá đã gồm VAT chưa?","Thường giá menu chưa gồm VAT, sẽ có ghi chú nhỏ.",PAYMENT
+FAQ_357,"Tôi muốn xóa liên kết ví Momo.","Vào quản lý thanh toán để hủy liên kết.",PAYMENT
+FAQ_358,"Thanh toán bị treo thì phải làm sao?","Chờ 30 phút hệ thống tự rà soát, nếu không hãy gọi hỗ trợ.",PAYMENT
+FAQ_359,"Có thể dùng 2 thẻ để thanh toán 1 đơn không?","Không, 1 đơn chỉ trừ tiền trên 1 phương thức.",PAYMENT
+FAQ_360,"Làm sao kiểm tra mã giao dịch?","Xem trong lịch sử giao dịch ngân hàng/ví hoặc email xác nhận.",PAYMENT
+FAQ_361,"Tôi không nhận được điểm giới thiệu.","Bạn của bạn phải hoàn thành đơn đặt bàn đầu tiên thì bạn mới có điểm.",LOYALTY
+FAQ_362,"Điểm thưởng có mua được vé xem phim không?","Tùy vào kho quà tặng hiện có, hãy kiểm tra danh mục đổi quà.",LOYALTY
+FAQ_363,"Tại sao hạng thành viên bị tụt?","Hết chu kỳ xét hạng nếu không đủ điểm sẽ bị tụt hạng.",LOYALTY
+FAQ_364,"Tôi muốn xem quy định tích điểm.","Vào mục 'Chính sách thành viên'.",LOYALTY
+FAQ_365,"Voucher có dùng được ở chi nhánh khác không?","Tùy quy định, thường áp dụng toàn hệ thống chuỗi.",LOYALTY
+FAQ_366,"Làm sao biết voucher đã dùng chưa?","Voucher đã dùng sẽ chuyển sang tab 'Đã sử dụng' hoặc 'Hết hạn'.",LOYALTY
+FAQ_367,"Có quà cho ngày kỷ niệm ngày cưới không?","Nếu bạn cập nhật ngày kỷ niệm trong hồ sơ, có thể sẽ có quà.",LOYALTY
+FAQ_368,"Tôi muốn tặng voucher cho người khác.","Chức năng tặng quà đang được phát triển.",LOYALTY
+FAQ_369,"Đổi điểm bị lỗi.","Liên hệ CSKH để được hoàn điểm và xử lý.",LOYALTY
+FAQ_370,"Có chương trình hoàn tiền (Cashback) không?","Tùy đợt khuyến mãi hợp tác với ngân hàng/ví điện tử.",LOYALTY
+FAQ_371,"Tôi muốn góp ý về giao diện web.","Gửi email feedback@domain.com.",SUPPORT
+FAQ_372,"Tổng đài có làm việc chủ nhật không?","Có, tổng đài làm việc cả tuần.",SUPPORT
+FAQ_373,"Tôi bị nhân viên nhà hàng phân biệt đối xử.","Chúng tôi rất tiếc, vui lòng báo cáo ngay để xử lý nghiêm.",SUPPORT
+FAQ_374,"Làm sao để biết ticket hỗ trợ đang xử lý đến đâu?","Chúng tôi sẽ cập nhật trạng thái qua email.",SUPPORT
+FAQ_375,"Tôi muốn hủy khiếu nại.","Thông báo cho nhân viên hỗ trợ để đóng ticket.",SUPPORT
+FAQ_376,"Có hỗ trợ người nước ngoài không?","CSKH có thể giao tiếp tiếng Anh.",SUPPORT
+FAQ_377,"Tôi muốn chat qua Zalo OA.","Tìm kiếm tên ứng dụng trên Zalo và nhấn Quan tâm.",SUPPORT
+FAQ_378,"Gọi hotline có mất phí không?","Cước phí 1000đ/phút.",SUPPORT
+FAQ_379,"Tôi muốn tố cáo review sai sự thật.","Dùng chức năng 'Báo cáo' tại bình luận đó.",SUPPORT
+FAQ_380,"Tôi cần hỗ trợ pháp lý.","Liên hệ bộ phận pháp chế qua email.",SUPPORT
+FAQ_381,"App bị đơ khi mở camera.","Cấp quyền truy cập camera cho ứng dụng trong cài đặt.",SYSTEM
+FAQ_382,"Tôi muốn xem các quán đang có Flash Sale.","Vào mục Flash Sale trên trang chủ.",SYSTEM
+FAQ_383,"Làm sao tắt định vị?","Tắt GPS trên điện thoại.",SYSTEM
+FAQ_384,"Web báo lỗi 404.","Trang không tồn tại, vui lòng quay lại trang chủ.",SYSTEM
+FAQ_385,"Tôi muốn tìm quán Vintage.","Gõ từ khóa 'Vintage' vào ô tìm kiếm.",SYSTEM
+FAQ_386,"Làm sao lọc quán theo đánh giá sao?","Chọn bộ lọc '4 sao trở lên'.",SYSTEM
+FAQ_387,"Tìm quán có view sân thượng.","Lọc tiện ích 'Rooftop'.",SYSTEM
+FAQ_388,"Tôi muốn tìm quán bán mang về.","Chọn bộ lọc 'Delivery' hoặc 'Takeaway'.",SYSTEM
+FAQ_389,"Làm sao xem bản đồ toàn màn hình?","Nhấn vào icon mở rộng trên bản đồ.",SYSTEM
+FAQ_390,"Web có cookie không?","Có, chúng tôi dùng cookie để cải thiện trải nghiệm.",SYSTEM
+FAQ_391,"Tôi muốn xóa tài khoản liên kết Google.","Vào Cài đặt tài khoản -> Hủy liên kết Google.",ACCOUNT
+FAQ_392,"Tại sao tôi phải xác thực 2 bước?","Để tăng cường bảo mật.",ACCOUNT
+FAQ_393,"Tôi muốn đổi địa chỉ email nhận tin.","Cập nhật trong hồ sơ cá nhân.",ACCOUNT
+FAQ_394,"Làm sao biết ai đã xem hồ sơ tôi?","Hệ thống không hỗ trợ tính năng này.",ACCOUNT
+FAQ_395,"Tôi quên câu hỏi bảo mật.","Liên hệ CSKH để xác minh danh tính thủ công.",ACCOUNT
+FAQ_396,"Tài khoản bị khóa bao lâu?","Tùy mức độ vi phạm, có thể 7 ngày hoặc vĩnh viễn.",ACCOUNT
+FAQ_397,"Tôi muốn tải dữ liệu cá nhân về.","Sử dụng tính năng 'Tải về dữ liệu của tôi' trong cài đặt.",ACCOUNT
+FAQ_398,"Làm sao tắt quảng cáo trong app?","Hiện tại chưa hỗ trợ tắt quảng cáo.",ACCOUNT
+FAQ_399,"Tôi muốn đổi số điện thoại đăng nhập.","Liên hệ CSKH để được hỗ trợ đổi số.",ACCOUNT
+FAQ_400,"Đăng nhập thất bại quá nhiều lần.","Vui lòng chờ 30 phút trước khi thử lại.",ACCOUNT

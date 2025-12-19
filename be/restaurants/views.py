@@ -71,8 +71,8 @@ class RestaurantViewSet(viewsets.ModelViewSet):
 
     def get_permissions(self):
         """Phân quyền cho từng action"""
-        # Public cho xem danh sách / detail / available-slots
-        if self.action in ['list', 'retrieve', 'available_slots']:
+        # Public cho xem danh sách / detail / available-slots / search
+        if self.action in ['list', 'retrieve', 'available_slots', 'search']:
             return [AllowAny()]
         
         # Tạo nhà hàng: Partner ACTIVE
@@ -181,6 +181,82 @@ class RestaurantViewSet(viewsets.ModelViewSet):
         
         serializer = RestaurantListSerializer(restaurants, many=True)
         return Response(serializer.data)
+
+    @action(
+        detail=False,
+        methods=['get'],
+        permission_classes=[AllowAny],
+        url_path='search'
+    )
+    def search(self, request):
+        """
+        GET /api/restaurants/restaurants/search/?city=...&district=...&ward=...&query=...
+        
+        Tìm kiếm nhà hàng theo:
+        - city: Tên tỉnh/thành phố (optional)
+        - district: Tên quận/huyện (optional)
+        - ward: Tên phường/xã (optional)
+        - query: Tìm kiếm theo tên nhà hàng hoặc tên món ăn (optional, fuzzy search)
+        
+        Trả về danh sách nhà hàng khớp với điều kiện
+        """
+        city = request.query_params.get('city', '').strip()
+        district = request.query_params.get('district', '').strip()
+        ward = request.query_params.get('ward', '').strip()
+        query = request.query_params.get('query', '').strip()
+        
+        # Bắt đầu với queryset của APPROVED restaurants (public view)
+        queryset = Restaurant.objects.filter(status='APPROVED')
+        
+        # Lọc theo location (city/district/ward)
+        if city:
+            queryset = queryset.filter(location__city__icontains=city)
+        if district:
+            queryset = queryset.filter(location__district__icontains=district)
+        if ward:
+            queryset = queryset.filter(location__ward__icontains=ward)
+        
+        # Lọc theo query (tên nhà hàng hoặc tên món ăn) - fuzzy search
+        if query:
+            from rapidfuzz import fuzz
+            
+            # Lấy tất cả nhà hàng từ queryset hiện tại
+            restaurants = list(queryset)
+            filtered_restaurants = []
+            
+            for restaurant in restaurants:
+                # Kiểm tra tên nhà hàng
+                name_score = fuzz.token_set_ratio(query.lower(), restaurant.name.lower())
+                
+                # Kiểm tra tên món ăn
+                menu_items = restaurant.menu_items.filter(is_available=True)
+                menu_score = 0
+                for item in menu_items:
+                    item_score = fuzz.token_set_ratio(query.lower(), item.name.lower())
+                    if item_score > menu_score:
+                        menu_score = item_score
+                
+                # Nếu điểm >= 60 (tương đối khớp), thêm vào kết quả
+                max_score = max(name_score, menu_score)
+                if max_score >= 60:
+                    filtered_restaurants.append({
+                        'restaurant': restaurant,
+                        'score': max_score
+                    })
+            
+            # Sắp xếp theo điểm số giảm dần
+            filtered_restaurants.sort(key=lambda x: x['score'], reverse=True)
+            results = [item['restaurant'] for item in filtered_restaurants]
+        else:
+            # Sắp xếp theo rating
+            results = list(queryset.order_by('-rating'))
+        
+        # Serialize
+        serializer = RestaurantListSerializer(results, many=True)
+        return Response({
+            'count': len(serializer.data),
+            'results': serializer.data
+        })
 
     @action(
         detail=True,

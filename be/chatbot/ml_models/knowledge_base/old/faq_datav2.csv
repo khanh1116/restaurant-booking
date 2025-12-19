@@ -1,0 +1,71 @@
+﻿id,question,answer,category
+FAQ_C_001,Làm sao để đặt bàn trên web?,"Bạn chọn nhà hàng, chọn ngày/giờ và số khách, rồi nhấn 'Đặt ngay' và điền thông tin xác nhận.",BOOKING
+FAQ_C_001_V1,Cách để đặt bàn trên web?,"Bạn chọn nhà hàng, chọn ngày/giờ và số khách, rồi nhấn 'Đặt ngay' và điền thông tin xác nhận.",BOOKING
+FAQ_C_002,Web này có thu phí đặt bàn không?,Không. Dịch vụ đặt bàn trên hệ thống là miễn phí; bạn thanh toán chi phí ăn uống tại nhà hàng theo thực tế.,PAYMENT
+FAQ_C_002_V1,Trang này có thu phí đặt bàn không?,Không. Dịch vụ đặt bàn trên hệ thống là miễn phí; bạn thanh toán chi phí ăn uống tại nhà hàng theo thực tế.,PAYMENT
+FAQ_C_003,Đặt bàn xong có nhận được xác nhận không?,"Có. Sau khi đặt thành công, bạn sẽ nhận thông báo xác nhận (trong hệ thống và/hoặc qua email/SMS tuỳ cài đặt).",BOOKING
+FAQ_C_003_V1,Đặt bàn xong có thông báo xác nhận không?,"Có. Sau khi đặt thành công, bạn sẽ nhận thông báo xác nhận (trong hệ thống và/hoặc qua email/SMS tuỳ cài đặt).",BOOKING
+FAQ_C_004,Tôi muốn hủy đơn đặt bàn thì làm sao?,"Vào 'Lịch sử đặt bàn' (hoặc 'Đơn của tôi'), chọn đơn cần hủy và bấm 'Hủy'.",BOOKING
+FAQ_C_004_V1,Mình muốn hủy đơn đặt bàn thì làm sao?,"Vào 'Lịch sử đặt bàn' (hoặc 'Đơn của tôi'), chọn đơn cần hủy và bấm 'Hủy'.",BOOKING
+FAQ_C_005,Tôi muốn đổi giờ hoặc đổi ngày đặt bàn được không?,Được. Bạn vào chi tiết đơn đặt để chọn 'Đổi lịch/Đổi giờ' (nếu nhà hàng còn chỗ).,BOOKING
+FAQ_C_005_V1,Mình muốn đổi giờ hoặc đổi ngày đặt bàn được không?,Được. Bạn vào chi tiết đơn đặt để chọn 'Đổi lịch/Đổi giờ' (nếu nhà hàng còn chỗ).,BOOKING
+FAQ_C_006,Sửa số lượng người sau khi đặt có được không?,"Được. Bạn chỉnh sửa số khách trong chi tiết đơn, hoặc liên hệ nhà hàng nếu thay đổi nhiều.",BOOKING
+FAQ_C_006_V1,Đổi số lượng khách sau khi đặt có được không?,"Được. Bạn chỉnh sửa số khách trong chi tiết đơn, hoặc liên hệ nhà hàng nếu thay đổi nhiều.",BOOKING
+FAQ_C_007,Có thể đặt bàn trước bao lâu?,Bạn có thể đặt trước theo lịch mở của nhà hàng (thường tối đa khoảng 30 ngày).,BOOKING
+FAQ_C_007_V1,Đặt bàn trước được mấy ngày?,Bạn có thể đặt trước theo lịch mở của nhà hàng (thường tối đa khoảng 30 ngày).,BOOKING
+FAQ_C_008,Đặt bàn gấp trong ngày được không?,"Được, miễn là nhà hàng còn chỗ trống ở khung giờ bạn chọn.",BOOKING
+FAQ_C_008_V1,Có đặt bàn trong ngày không?,"Được, miễn là nhà hàng còn chỗ trống ở khung giờ bạn chọn.",BOOKING
+FAQ_C_009,Nếu tôi đến trễ thì có bị hủy bàn không?,"Nhà hàng thường giữ bàn khoảng 15–30 phút. Nếu bạn trễ, nên gọi báo trước để được hỗ trợ.",BOOKING
+FAQ_C_009_V1,Nếu tôi tới trễ thì có bị hủy bàn không?,"Nhà hàng thường giữ bàn khoảng 15–30 phút. Nếu bạn trễ, nên gọi báo trước để được hỗ trợ.",BOOKING
+FAQ_C_010,Tôi muốn chọn vị trí ngồi cụ thể (view đẹp) thì làm sao?,Bạn ghi chú yêu cầu ở bước đặt bàn. Nhà hàng sẽ cố gắng sắp xếp tuỳ tình trạng thực tế.,BOOKING
+FAQ_C_010_V1,Mình muốn chọn vị trí ngồi cụ thể (view đẹp) thì làm sao?,Bạn ghi chú yêu cầu ở bước đặt bàn. Nhà hàng sẽ cố gắng sắp xếp tuỳ tình trạng thực tế.,BOOKING
+FAQ_C_011,Tôi muốn đặt phòng riêng (VIP) được không?,Bạn chọn nhà hàng có tiện ích 'Phòng riêng/VIP' và ghi chú nhu cầu khi đặt.,BOOKING
+FAQ_C_011_V1,Mình muốn đặt phòng riêng (VIP) được không?,Bạn chọn nhà hàng có tiện ích 'Phòng riêng/VIP' và ghi chú nhu cầu khi đặt.,BOOKING
+FAQ_C_012,Tôi đặt bàn nhưng không thấy mã đơn hàng.,Mã đơn nằm trong 'Chi tiết đặt chỗ' và thường có trong thông báo/email xác nhận.,BOOKING
+FAQ_C_012_V1,Mình đặt bàn nhưng không thấy mã đơn hàng.,Mã đơn nằm trong 'Chi tiết đặt chỗ' và thường có trong thông báo/email xác nhận.,BOOKING
+FAQ_C_013,Tôi muốn xem thực đơn trước.,Bạn vào trang chi tiết nhà hàng để xem menu/ảnh menu (nếu nhà hàng đã cập nhật).,BOOKING
+FAQ_C_013_V1,Mình muốn xem thực đơn trước.,Bạn vào trang chi tiết nhà hàng để xem menu/ảnh menu (nếu nhà hàng đã cập nhật).,BOOKING
+FAQ_C_014,Làm sao để đánh giá nhà hàng sau khi ăn?,"Sau khi đơn hoàn tất, bạn vào 'Lịch sử đặt bàn' và chọn 'Đánh giá' để chấm sao và nhận xét.",LOYALTY
+FAQ_C_014_V1,Cách để đánh giá nhà hàng sau khi ăn?,"Sau khi đơn hoàn tất, bạn vào 'Lịch sử đặt bàn' và chọn 'Đánh giá' để chấm sao và nhận xét.",LOYALTY
+FAQ_C_015,Hệ thống có nhắc lịch hẹn không?,Có. Hệ thống sẽ gửi nhắc trước giờ hẹn (tuỳ cài đặt thông báo của bạn).,SYSTEM
+FAQ_C_015_V1,Ứng dụng có nhắc lịch hẹn không?,Có. Hệ thống sẽ gửi nhắc trước giờ hẹn (tuỳ cài đặt thông báo của bạn).,SYSTEM
+FAQ_C_016,Làm thế nào để đăng ký tài khoản?,"Bấm 'Đăng ký', nhập thông tin cơ bản (SĐT/email) và xác thực theo hướng dẫn.",ACCOUNT
+FAQ_C_016_V1,Cách để đăng ký tài khoản?,"Bấm 'Đăng ký', nhập thông tin cơ bản (SĐT/email) và xác thực theo hướng dẫn.",ACCOUNT
+FAQ_C_017,Tôi quên mật khẩu đăng nhập rồi.,Chọn 'Quên mật khẩu' ở màn hình đăng nhập và làm theo hướng dẫn để đặt lại mật khẩu.,ACCOUNT
+FAQ_C_017_V1,Mình quên mật khẩu đăng nhập rồi.,Chọn 'Quên mật khẩu' ở màn hình đăng nhập và làm theo hướng dẫn để đặt lại mật khẩu.,ACCOUNT
+FAQ_C_018,Tại sao tôi không nhận được mã OTP?,"Kiểm tra lại số điện thoại, sóng/Internet và thử gửi lại sau 1–2 phút; nếu vẫn lỗi hãy liên hệ hỗ trợ.",ACCOUNT
+FAQ_C_018_V1,Tại sao tôi không thấy OTP gửi về thì sao?,"Kiểm tra lại số điện thoại, sóng/Internet và thử gửi lại sau 1–2 phút; nếu vẫn lỗi hãy liên hệ hỗ trợ.",ACCOUNT
+FAQ_C_019,Tôi không nhớ tên đăng nhập.,Tên đăng nhập thường là số điện thoại hoặc email bạn đã dùng để đăng ký.,ACCOUNT
+FAQ_C_019_V1,Mình không nhớ tên đăng nhập.,Tên đăng nhập thường là số điện thoại hoặc email bạn đã dùng để đăng ký.,ACCOUNT
+FAQ_C_020,Tôi muốn đổi mật khẩu mới.,Vào 'Cài đặt tài khoản' → 'Đổi mật khẩu' và nhập mật khẩu cũ/mới theo hướng dẫn.,ACCOUNT
+FAQ_C_020_V1,Mình muốn đổi mật khẩu mới.,Vào 'Cài đặt tài khoản' → 'Đổi mật khẩu' và nhập mật khẩu cũ/mới theo hướng dẫn.,ACCOUNT
+FAQ_C_021,"Tài khoản của tôi bị khóa/tạm khóa, phải làm sao?",Bạn thử đăng nhập lại sau một thời gian hoặc liên hệ CSKH để được kiểm tra và hỗ trợ.,ACCOUNT
+FAQ_C_021_V1,Tài khoản của tôi bị khóa tài khoản thì xử lý thế nào?,Bạn thử đăng nhập lại sau một thời gian hoặc liên hệ CSKH để được kiểm tra và hỗ trợ.,ACCOUNT
+FAQ_C_022,Tôi muốn thay đổi email hoặc số điện thoại liên kết.,Vào 'Hồ sơ/Thông tin cá nhân' để cập nhật; một số trường hợp cần xác thực lại.,ACCOUNT
+FAQ_C_022_V1,Mình muốn thay đổi email hoặc số điện thoại liên kết.,Vào 'Hồ sơ/Thông tin cá nhân' để cập nhật; một số trường hợp cần xác thực lại.,ACCOUNT
+FAQ_C_023,Tôi muốn xóa tài khoản vĩnh viễn.,Vào 'Cài đặt tài khoản' và chọn 'Yêu cầu xóa tài khoản' (nếu có) hoặc liên hệ CSKH để hỗ trợ.,ACCOUNT
+FAQ_C_023_V1,Mình muốn xóa tài khoản vĩnh viễn.,Vào 'Cài đặt tài khoản' và chọn 'Yêu cầu xóa tài khoản' (nếu có) hoặc liên hệ CSKH để hỗ trợ.,ACCOUNT
+FAQ_C_024,Làm sao để đăng xuất khỏi các thiết bị khác?,Bạn có thể đổi mật khẩu hoặc dùng mục 'Quản lý thiết bị/Đăng xuất tất cả' (nếu hệ thống hỗ trợ).,ACCOUNT
+FAQ_C_024_V1,Cách để đăng xuất khỏi các thiết bị khác?,Bạn có thể đổi mật khẩu hoặc dùng mục 'Quản lý thiết bị/Đăng xuất tất cả' (nếu hệ thống hỗ trợ).,ACCOUNT
+FAQ_C_025,Có cần đặt cọc khi đặt bàn không?,Tùy quy định của từng nhà hàng (nhất là giờ cao điểm/đoàn đông). Hệ thống sẽ hiển thị rõ trước khi xác nhận.,PAYMENT
+FAQ_C_025_V1,Có đặt bàn có phải cọc không?,Tùy quy định của từng nhà hàng (nhất là giờ cao điểm/đoàn đông). Hệ thống sẽ hiển thị rõ trước khi xác nhận.,PAYMENT
+FAQ_C_026,Hệ thống chấp nhận phương thức thanh toán nào?,"Tùy nhà hàng và cổng thanh toán: thường gồm tiền mặt tại quán, thẻ và một số ví/CK (nếu hỗ trợ).",PAYMENT
+FAQ_C_026_V1,Ứng dụng chấp nhận phương thức thanh toán nào?,"Tùy nhà hàng và cổng thanh toán: thường gồm tiền mặt tại quán, thẻ và một số ví/CK (nếu hỗ trợ).",PAYMENT
+FAQ_C_027,Hủy bàn có bị phạt tiền không?,"Nếu có đặt cọc, phí hủy (nếu có) phụ thuộc chính sách nhà hàng; hệ thống sẽ hiển thị điều kiện áp dụng.",PAYMENT
+FAQ_C_027_V1,hủy đặt bàn có bị tính phí không?,"Nếu có đặt cọc, phí hủy (nếu có) phụ thuộc chính sách nhà hàng; hệ thống sẽ hiển thị điều kiện áp dụng.",PAYMENT
+FAQ_C_028,Tôi muốn hoàn tiền cọc thì làm sao?,"Nếu hủy đúng chính sách, tiền cọc sẽ được hoàn về phương thức thanh toán theo thời gian xử lý của hệ thống/ngân hàng.",PAYMENT
+FAQ_C_028_V1,Mình muốn hoàn tiền cọc thì làm sao?,"Nếu hủy đúng chính sách, tiền cọc sẽ được hoàn về phương thức thanh toán theo thời gian xử lý của hệ thống/ngân hàng.",PAYMENT
+FAQ_C_029,Thanh toán lỗi nhưng tiền vẫn bị trừ.,Bạn giữ lại mã giao dịch/mã đơn và liên hệ hỗ trợ để tra soát; nhiều trường hợp sẽ tự hoàn sau một thời gian ngắn.,PAYMENT
+FAQ_C_029_V1,bị trừ tiền nhưng báo lỗi thanh toán thì sao?,Bạn giữ lại mã giao dịch/mã đơn và liên hệ hỗ trợ để tra soát; nhiều trường hợp sẽ tự hoàn sau một thời gian ngắn.,PAYMENT
+FAQ_C_030,Tôi có mã giảm giá nhưng không dùng được.,"Hãy kiểm tra hạn dùng và điều kiện áp dụng (nhà hàng áp dụng, mức tối thiểu, khung giờ, v.v.).",LOYALTY
+FAQ_C_030_V1,Mình có mã giảm giá nhưng không dùng được.,"Hãy kiểm tra hạn dùng và điều kiện áp dụng (nhà hàng áp dụng, mức tối thiểu, khung giờ, v.v.).",LOYALTY
+FAQ_C_031,Hệ thống có tích điểm/voucher không?,"Tùy chương trình. Nếu có, điểm/voucher sẽ hiển thị trong mục 'Ưu đãi/Điểm thưởng/Ví voucher'.",LOYALTY
+FAQ_C_031_V1,Ứng dụng có tích điểm/voucher không?,"Tùy chương trình. Nếu có, điểm/voucher sẽ hiển thị trong mục 'Ưu đãi/Điểm thưởng/Ví voucher'.",LOYALTY
+FAQ_C_032,Voucher/điểm thưởng có hạn không?,"Nếu chương trình có áp dụng, hạn dùng sẽ được ghi rõ trong chi tiết voucher/điểm.",LOYALTY
+FAQ_C_032_V1,voucher/điểm có hết hạn không?,"Nếu chương trình có áp dụng, hạn dùng sẽ được ghi rõ trong chi tiết voucher/điểm.",LOYALTY
+FAQ_C_033,Web bị lỗi không truy cập được.,"Bạn thử tải lại trang, xóa cache, hoặc đổi trình duyệt. Nếu vẫn lỗi, hãy liên hệ hỗ trợ và gửi kèm ảnh lỗi.",SUPPORT
+FAQ_C_033_V1,"không vào được web, bị lỗi.","Bạn thử tải lại trang, xóa cache, hoặc đổi trình duyệt. Nếu vẫn lỗi, hãy liên hệ hỗ trợ và gửi kèm ảnh lỗi.",SUPPORT
+FAQ_C_034,Tôi cần hỗ trợ kỹ thuật/góp ý.,"Bạn vào mục 'Liên hệ/Góp ý' để gửi phản hồi, hoặc liên hệ CSKH theo kênh hỗ trợ được cung cấp trong hệ thống.",SUPPORT
+FAQ_C_034_V1,Mình cần hỗ trợ kỹ thuật/góp ý.,"Bạn vào mục 'Liên hệ/Góp ý' để gửi phản hồi, hoặc liên hệ CSKH theo kênh hỗ trợ được cung cấp trong hệ thống.",SUPPORT
+FAQ_C_035,Tôi muốn hợp tác làm đối tác nhà hàng.,"Vào trang 'Dành cho Đối tác' và điền form đăng ký, đội ngũ sẽ liên hệ hướng dẫn.",SUPPORT
+FAQ_C_035_V1,Mình muốn hợp tác làm đối tác nhà hàng.,"Vào trang 'Dành cho Đối tác' và điền form đăng ký, đội ngũ sẽ liên hệ hướng dẫn.",SUPPORT
