@@ -65,3 +65,10 @@ dist-ssr/
 
 
 be/media/
+
+
+# Large ML models
+be/chatbot/ml_models/**/model.safetensors
+be/chatbot/ml_models/**/*.safetensors
+be/chatbot/ml_models/**/pytorch_model*.bin
+be/chatbot/ml_models/**/checkpoint-*/
