@@ -67,8 +67,9 @@ dist-ssr/
 be/media/
 
 
-# Large ML models
-be/chatbot/ml_models/**/model.safetensors
-be/chatbot/ml_models/**/*.safetensors
-be/chatbot/ml_models/**/pytorch_model*.bin
-be/chatbot/ml_models/**/checkpoint-*/
+# Ignore all files in finetuned model folders
+be/chatbot/ml_models/vietnamese-sbert-finetuned-finalv2/**
+be/chatbot/ml_models/vit5-finetuned-finalv2/**
+
+!be/chatbot/ml_models/vietnamese-sbert-finetuned-finalv2/.gitkeep
+!be/chatbot/ml_models/vit5-finetuned-finalv2/.gitkeep
